@@ -1,0 +1,983 @@
+Quick Start
+Account Management
+Key Concepts
+Pipeline & Profiles
+Warehouse Access
+Audiences & Activation
+Tutorials
+SDKs & Tools
+Integrations
+Partners
+Legacy
+Developer Quickstart
+Introduction
+Welcome to the Lytics developer tier! This guide will walk you through the steps to get started with Lytics and leverage its powerful personalization capabilities for your website.
+Before You Begin
+Before diving into the setup process, make sure you have the following:
+Getting Started Checklist
+Getting started with Lytics is quick and easy! In just a few minutes, you'll be able to set up Lytics and start personalizing your website. We've focused this guide on the 3 essential steps to ensure a positive experience for you and your customers:
+Digging Deeper
+After completing the initial checklist outlined above, it's time to explore further avenues for enhancing and utilizing your profiles to their fullest potential. We've broken additional guides into two core focuses:
+Building Profiles
+Here, we'll gain a comprehensive understanding of all available out-of-the-box attributes. Discover how to tag your site and integrate other sources to create robust and comprehensive profiles. This section is divided into:
+Default Attributes & Segments:
+Site Activity & Conversion Tagging:
+Using Profiles
+Here, we'll explore leveraging out-of-the-box personalization SDKs and APIs to deliver optimal user experiences. Discover how to harness Lytics' tools and integrations to create tailored experiences that resonate with your audience. This section covers:
+Guides & Inspiration
+SDK Documentation
+Updated6 months ago
+Quick Start
+Account Management
+Key Concepts
+Pipeline & Profiles
+Warehouse Access
+Audiences & Activation
+Tutorials
+SDKs & Tools
+Integrations
+Partners
+Legacy
+Developer Quickstart
+Introduction
+Welcome to the Lytics developer tier! This guide will walk you through the steps to get started with Lytics and leverage its powerful personalization capabilities for your website.
+Before You Begin
+Before diving into the setup process, make sure you have the following:
+Getting Started Checklist
+Getting started with Lytics is quick and easy! In just a few minutes, you'll be able to set up Lytics and start personalizing your website. We've focused this guide on the 3 essential steps to ensure a positive experience for you and your customers:
+Digging Deeper
+After completing the initial checklist outlined above, it's time to explore further avenues for enhancing and utilizing your profiles to their fullest potential. We've broken additional guides into two core focuses:
+Building Profiles
+Here, we'll gain a comprehensive understanding of all available out-of-the-box attributes. Discover how to tag your site and integrate other sources to create robust and comprehensive profiles. This section is divided into:
+Default Attributes & Segments:
+Site Activity & Conversion Tagging:
+Using Profiles
+Here, we'll explore leveraging out-of-the-box personalization SDKs and APIs to deliver optimal user experiences. Discover how to harness Lytics' tools and integrations to create tailored experiences that resonate with your audience. This section covers:
+Guides & Inspiration
+SDK Documentation
+Updated6 months ago
+Quick Start
+Account Management
+Key Concepts
+Pipeline & Profiles
+Warehouse Access
+Audiences & Activation
+Tutorials
+SDKs & Tools
+Integrations
+Partners
+Legacy
+1. Install the Lytics Tag
+Installing the Tag
+In the Web SDK, Lytics provides a tag that can be placed on your site to collect behavioral data and surface the materialized profile back to your browser in real time. Manual installation instructions are available from within the app atData Pipeline>SDK>Web SDK.
+If your site is aDrupalorWordpresssite, or you useGoogle Tag Managerwe recommend using one of these turnkey methods to install the Lytics Tag:
+Visit theConfigurationpage either from the module details in theExtendsection of Drupal or directly from theConfigurationsection (/en/admin/config/system/lytics).
+Add a valid API Token for your Lytics account. Be sure to give that tokenadminprivileges, as that will unlock account verification and direct access to all Lytics systems responsible for surfacing and managing profiles and personalization. This token should also have no expiration, as it will need continued access to your Lytics account. For more information visit ourAccess Token documentation.
+With your token entered. Ensure theEnable Tabsetting is selected. This will automatically place the Lytics JavaScript SDK onto all public pages of your site.
+Uponsaving configuration, your account details will be surfaced. Be sure to verify that your token is for the Lytics account you are currently configuring.
+That's it!
+Testing the Lytics Tag Installation
+Once the tag has been installed, validate a successful installation via one of the three following methods:
+The Lytics Dev Tools Chrome Extension makes validation and exploration simple. Once you've installed the extension as outlined above:
+Open the extension and ensure it has been activated.
+The interface will display a message to confirm the correct installation of the Lytics tag and relevant configuration details.
+We've built a simple tool to validate that data flows into your Lytics account. Please note that the collected events may take a few minutes to reflect in the UI.
+If you prefer to verify the installation manually, you can do so by opening the Chrome developer console and ensuringjstagis accessible. In addition, by viewing the network tab, you can monitor data collection requests being sent tolytics.io/cand personalization requests being loaded fromlytics.io/api/personalize
+Testing the Current Visitor's Profile via JavaScript SDK
+The final step to verify installation is ensuring you can access your visitor profile. This profile is built and delivered in real-time as you engage with content.
+The Lytics Dev Tools Chrome Extension makes validation and exploration simple. Once you've installed the extension as outlined above:
+Open the extension and ensure it has been activated.
+AccessProfilefrom the bottom menu in the Chrome extension.
+This section of the extension profiles two views into your profile.
+The first is theSummaryshowcasing available attributes and affinities.
+The second is theDetails, which profiles a raw JSON dump of all available attributes and insights accessible via the Personalization Engine web SDK.
+If you prefer to verify the installation manually, you can do so by opening the Chrome developer console and ensuringjstagis accessible. In addition, by viewing the network tab, you can monitor data collection requests being sent tolytics.io/cand personalization requests being loaded fromlytics.io/api/personalize
+Updated5 months ago
+Quick Start
+Account Management
+Key Concepts
+Pipeline & Profiles
+Warehouse Access
+Audiences & Activation
+Tutorials
+SDKs & Tools
+Integrations
+Partners
+Legacy
+2. Content Setup
+Lytics' Interest Engines effectively analyze your content with minimal effort required. However, to guarantee that the classification results align with your expectations, conducting a quick test is advisable, as poor metadata can sometimes lead to less-than-optimal outcomes. The most reliable method to ensure comprehensive and satisfactory content classification is to classify a selection of your URLs manually.
+Updated5 months ago
+Quick Start
+Account Management
+Key Concepts
+Pipeline & Profiles
+Warehouse Access
+Audiences & Activation
+Tutorials
+SDKs & Tools
+Integrations
+Partners
+Legacy
+3. Surface Personalized Message
+The Lytics Personalization Engine profiles real-time access to a comprehensive visitor profile. Before we jump into the weeds of how you can fully build and leverage this profile, let's create our first experience.
+Surface a Simple Message
+Lytics comes with our Personalization SDK called Pathfora. Pathfora allows you to easily surface simple lead capture and messaging modals or content directly inline. Fulldocumentationfor Pathfora is available, but initially, let's surface a welcome message to ouranonymous visitoraudience.
+Alter the Pathfora configuration to your liking.
+Install the Pathfora configuration onto your site via your preferred tag management method.
+Refresh the page and be greeted with your new welcome message targeted at anonymous visitors!
+
+Lytics and Pathfora provide a great deal of flexibility. If you are ready to dive deeper, please explore some of our other popular use cases:
+Updated6 months ago
+Quick Start
+Account Management
+Key Concepts
+Pipeline & Profiles
+Warehouse Access
+Audiences & Activation
+Tutorials
+SDKs & Tools
+Integrations
+Partners
+Legacy
+Building Profiles
+Welcome to the world of building profiles with Lytics! Here, you can unlock the full potential of understanding your audience through three key aspects available right out of the box:
+Default Profile Attributes:Lytics offers a robust set of pre-packaged user attributes, including automatically generated and customizable ones. Empowered by predictive modeling and machine learning algorithms, these attributes enable you to gain deeper insights into your audience.
+Default Segments:Explore predefined user segments that categorize your audience based on behavioral and demographic factors. With no lift or custom definition required, these segments offer quick insights for tailored marketing strategies.
+Ready to dive in? Click on each section to explore the details and enhance your profiling efforts effortlessly. Looking for a recommendation? We say you should start by understanding all the available attributes.
+Updated12 months ago
+Quick Start
+Account Management
+Key Concepts
+Pipeline & Profiles
+Warehouse Access
+Audiences & Activation
+Tutorials
+SDKs & Tools
+Integrations
+Partners
+Legacy
+Default Attributes
+Lytics offers a wide range of pre-packaged user attributes, including automatically generated and customizable ones. Additionally, Lytics employs predictive modeling and machine learning algorithms to provide insights and scores, allowing users to gain a deeper understanding of their audience. The guide below provides an overview of all available attributes and examples to enhance your profiling efforts.
+👍
+If you haven't already reviewed ourdocumentation on collecting eventsvia our JavaScript SDK, we highly recommend doing so first. This will give you a better understanding of how data collection works at a high level before delving into the specifics of what can be collected.
+Available Attributes
+The following attributes are all available out of the box with no customization necessary in all Lytics pricing tiers. Do note that any attributes flagged asComputedcan not be edited directly but are computed based on various factors, including other non-computed attributes.
+📘
+For a more comprehensive example of how any of the following attributes can be collected and used for your visitors click thenameof the identifier to access the code examples below.
+Identifiers
+Default attributes that are used to stitch profiles together. For instance, if you pass anemailalong with the_uid, all events that have only been associated with either identifier will be merged into a single comprehensive profile.
+Details
+Details encompass all default attributes related to user demographics and general information, including name, phone number, status, etc. It serves as a catch-all for attributes not specifically tied to interactions or behaviors.
+Meta
+Meta encompasses all system-level information that provides insights into the health and breadth of the profile. This includes data such as creation date, last update timestamp, source information, and other metadata associated with the profile's management and maintenance. Metadata offers a behind-the-scenes view of the profile's overall status and administration.
+Behavior
+Behavioral attributes typically cannot be directly managed but represent a set of insights derived from a user's behavior over time. These insights are invaluable when personalizing experiences based on changes in behavior or behaviors indicative of high likelihood. For instance, you might want to present a premium offer to users exhibiting higher momentum than usual. Behavioral attributes enable targeted and timely interventions tailored to user actions and patterns.
+Interests
+Interests entail understanding the topics a user is interested in based on their interactions, cross-referenced by deep programmatic analysis of their online activities. This allows for tailored content recommendations and targeted messaging aligned with the user's preferences and engagement history.
+Intelligence
+Attributes classified as intelligence encompass diverse, highly valuable information to facilitate relevant and high-value personalized experiences. Within this category, you'll discover real-time segment membership, values crucial for split testing and experimentation, and direct correlation to our real-time machine learning modeling. These attributes empower dynamic and data-driven decision-making, enhancing the efficacy of personalized marketing strategies.
+Activity
+Activity encompasses the user's engagement across different channels and campaigns, including clicks and conversions. It provides valuable insights into recent interactions, aiding campaign optimization and channel effectiveness assessment.
+General
+Web
+Campaign
+Examples
+Identifiers
+This is an automatically generated canonical ID managed by Lytics. It refers to the materialized profile and cannot be customized or overridden.
+_uid represents the Lytics anonymous 1st party cookie. This value is automatically captured with everyjstag.send()call from the JavaScript tag. The only way to customize this value is to explicitly set the value of _uid, which we do not recommend.
+Details
+By default, the Lytics JavaScript SDK will collect language information based on the browser, but this can be overridden.
+Meta
+Lytics automatically generate this and represents the oldest event associated with the user.
+This is automatically generated by Lytics and represents the last time the user was modified.
+This is automatically generated by Lytics and represents the last time the users scores were updated.
+This is automatically generated by Lytics and represents the number of aliases associated with the user.
+This is automatically generated by Lytics and represents the number of days the user has existed.
+This is automatically generated by Lytics and represents the number of events associated with the user.
+This is automatically generated by Lytics and represents the number of streams associated with the user.
+This is automatically generated by Lytics and represents the names of the streams associated with the user.
+This is automatically generated by Lytics and represents whether the user has been flagged as a bot or not.
+Behavior
+The following attributes are all computed in real-time as the profile evolves. Each of the behavioral attributes are surfaced as a score between 0 and 100. These scores represent an aggregate summary of the user's behavior across various dimensions: Consistency, Frequency, Intensity, Maturity, Momentum, Propensity, Quantity, Recency, and Volatility.
+Interests
+The interest attributes are computed in real-time and represent the user's interest in various topics. These topics are generated as a result of the analysis done by the Lytics Interest Engine and then associated with the user based upon their interaction with content on your site.
+Intelligence
+This attribute displays an array of all segments the user is currently a member of. It updates in real-time based on various audience definitions. Lytics offers a range of useful segments out of the box, requiring no additional setup. For detailed information on these audiences, refer to our Developer Tier > Audiences documentation.
+These attributes are automatically generated by Lytics and represent a random value evenly distributed across users. They are useful for split testing and experimentation.
+This attribute is computed in real-time and represents the relative distance between now and the next predicted event. It is stream specific and is useful for understanding when a user is likely to engage again.
+This attribute is computed in real-time and represents the next expected event. It is stream specific and is useful for understanding when a user is likely to engage again.
+This attribute is computed in real-time and represents the scores resulting from Lytics Lookalike and SegmentML models. Out-of-the-box, Lytics offers a range of useful models, requiring no additional setup. For detailed information on these models, refer to our Developer Tier > Models documentation.
+Activity
+General
+Both of these attributes are automatically populated based upon the_evalue in thejstag.sendpayload. By default Lytics will collect apvevent for each page view and this will automatically populate thefirst_seenandlast_seenattributes. Below is an example of collecting a custom event that would populate these attributes as well.
+This attribute is automatically populated with a count of events per hour for the user.
+This attribute is automatically populated with a count of events per hour of the week for the user.
+This attribute is automatically populated with the last time an event was received in any stream for the user.
+Web
+This attribute is automatically populated with the domains the user has been active on.
+This attribute is automatically populated with the first time the user visited the site and sends data to thedefaultstream.
+This attribute is automatically populated with the last time the user visited the site and sends data to thedefaultstream.
+This attribute is automatically populated with the number of_pvevents recieved for the user.
+This attribute is automatically populated with the referring domain for the user.
+This attribute is automatically populated based on the user agent of the browser. This attribute must be turned on in your Lytics account to be collected.
+This attribute is automatically populated with the number of visits the user has had based on presence of the_sesstartkey in an event.
+This attribute is automatically populated with the city the user visited from based upon GeoIP.
+This attribute is automatically populated with the country the user visited from based upon GeoIP.
+This attribute is automatically populated with the region the user visited from based upon GeoIP.
+Form data is a wildcard attribute that allows you to pass a number of key value pairs that all get stored under theform_dataattribute. This is useful for capturing form submissions.
+Campaign
+Updated12 months ago
+Quick Start
+Account Management
+Key Concepts
+Pipeline & Profiles
+Warehouse Access
+Audiences & Activation
+Tutorials
+SDKs & Tools
+Integrations
+Partners
+Legacy
+1. Install the Lytics Tag
+Installing the Tag
+In the Web SDK, Lytics provides a tag that can be placed on your site to collect behavioral data and surface the materialized profile back to your browser in real time. Manual installation instructions are available from within the app atData Pipeline>SDK>Web SDK.
+If your site is aDrupalorWordpresssite, or you useGoogle Tag Managerwe recommend using one of these turnkey methods to install the Lytics Tag:
+Visit theConfigurationpage either from the module details in theExtendsection of Drupal or directly from theConfigurationsection (/en/admin/config/system/lytics).
+Add a valid API Token for your Lytics account. Be sure to give that tokenadminprivileges, as that will unlock account verification and direct access to all Lytics systems responsible for surfacing and managing profiles and personalization. This token should also have no expiration, as it will need continued access to your Lytics account. For more information visit ourAccess Token documentation.
+With your token entered. Ensure theEnable Tabsetting is selected. This will automatically place the Lytics JavaScript SDK onto all public pages of your site.
+Uponsaving configuration, your account details will be surfaced. Be sure to verify that your token is for the Lytics account you are currently configuring.
+That's it!
+Testing the Lytics Tag Installation
+Once the tag has been installed, validate a successful installation via one of the three following methods:
+The Lytics Dev Tools Chrome Extension makes validation and exploration simple. Once you've installed the extension as outlined above:
+Open the extension and ensure it has been activated.
+The interface will display a message to confirm the correct installation of the Lytics tag and relevant configuration details.
+We've built a simple tool to validate that data flows into your Lytics account. Please note that the collected events may take a few minutes to reflect in the UI.
+If you prefer to verify the installation manually, you can do so by opening the Chrome developer console and ensuringjstagis accessible. In addition, by viewing the network tab, you can monitor data collection requests being sent tolytics.io/cand personalization requests being loaded fromlytics.io/api/personalize
+Testing the Current Visitor's Profile via JavaScript SDK
+The final step to verify installation is ensuring you can access your visitor profile. This profile is built and delivered in real-time as you engage with content.
+The Lytics Dev Tools Chrome Extension makes validation and exploration simple. Once you've installed the extension as outlined above:
+Open the extension and ensure it has been activated.
+AccessProfilefrom the bottom menu in the Chrome extension.
+This section of the extension profiles two views into your profile.
+The first is theSummaryshowcasing available attributes and affinities.
+The second is theDetails, which profiles a raw JSON dump of all available attributes and insights accessible via the Personalization Engine web SDK.
+If you prefer to verify the installation manually, you can do so by opening the Chrome developer console and ensuringjstagis accessible. In addition, by viewing the network tab, you can monitor data collection requests being sent tolytics.io/cand personalization requests being loaded fromlytics.io/api/personalize
+Updated5 months ago
+Quick Start
+Account Management
+Key Concepts
+Pipeline & Profiles
+Warehouse Access
+Audiences & Activation
+Tutorials
+SDKs & Tools
+Integrations
+Partners
+Legacy
+1. Install the Lytics Tag
+Installing the Tag
+In the Web SDK, Lytics provides a tag that can be placed on your site to collect behavioral data and surface the materialized profile back to your browser in real time. Manual installation instructions are available from within the app atData Pipeline>SDK>Web SDK.
+If your site is aDrupalorWordpresssite, or you useGoogle Tag Managerwe recommend using one of these turnkey methods to install the Lytics Tag:
+Visit theConfigurationpage either from the module details in theExtendsection of Drupal or directly from theConfigurationsection (/en/admin/config/system/lytics).
+Add a valid API Token for your Lytics account. Be sure to give that tokenadminprivileges, as that will unlock account verification and direct access to all Lytics systems responsible for surfacing and managing profiles and personalization. This token should also have no expiration, as it will need continued access to your Lytics account. For more information visit ourAccess Token documentation.
+With your token entered. Ensure theEnable Tabsetting is selected. This will automatically place the Lytics JavaScript SDK onto all public pages of your site.
+Uponsaving configuration, your account details will be surfaced. Be sure to verify that your token is for the Lytics account you are currently configuring.
+That's it!
+Testing the Lytics Tag Installation
+Once the tag has been installed, validate a successful installation via one of the three following methods:
+The Lytics Dev Tools Chrome Extension makes validation and exploration simple. Once you've installed the extension as outlined above:
+Open the extension and ensure it has been activated.
+The interface will display a message to confirm the correct installation of the Lytics tag and relevant configuration details.
+We've built a simple tool to validate that data flows into your Lytics account. Please note that the collected events may take a few minutes to reflect in the UI.
+If you prefer to verify the installation manually, you can do so by opening the Chrome developer console and ensuringjstagis accessible. In addition, by viewing the network tab, you can monitor data collection requests being sent tolytics.io/cand personalization requests being loaded fromlytics.io/api/personalize
+Testing the Current Visitor's Profile via JavaScript SDK
+The final step to verify installation is ensuring you can access your visitor profile. This profile is built and delivered in real-time as you engage with content.
+The Lytics Dev Tools Chrome Extension makes validation and exploration simple. Once you've installed the extension as outlined above:
+Open the extension and ensure it has been activated.
+AccessProfilefrom the bottom menu in the Chrome extension.
+This section of the extension profiles two views into your profile.
+The first is theSummaryshowcasing available attributes and affinities.
+The second is theDetails, which profiles a raw JSON dump of all available attributes and insights accessible via the Personalization Engine web SDK.
+If you prefer to verify the installation manually, you can do so by opening the Chrome developer console and ensuringjstagis accessible. In addition, by viewing the network tab, you can monitor data collection requests being sent tolytics.io/cand personalization requests being loaded fromlytics.io/api/personalize
+Updated5 months ago
+Quick Start
+Account Management
+Key Concepts
+Pipeline & Profiles
+Warehouse Access
+Audiences & Activation
+Tutorials
+SDKs & Tools
+Integrations
+Partners
+Legacy
+Default Segments
+Categorizing users based on their behaviors and characteristics is pivotal for effective audience targeting and personalization strategies. Lytics audience segmentation offers a powerful tool for organizing users into meaningful groups based on shared attributes or behaviors. This section provides a comprehensive overview of all audience segments that are provided out-of-the-box.
+Available Segments (Audiences)
+👍
+Lytics audience segments apply predefined rules to each user profile as they update. Membership in these segments is maintained in real-time and can trigger subsequent actions when users enter or exit the segment.
+The following audience segments are all available out of the box, with no customization necessary in all Lytics pricing tiers.
+Updated7 months ago
+Quick Start
+Account Management
+Key Concepts
+Pipeline & Profiles
+Warehouse Access
+Audiences & Activation
+Tutorials
+SDKs & Tools
+Integrations
+Partners
+Legacy
+Lead Capture
+TL;DR
+This document outlines how to leverage Lytics' real-time personalization engine to identify visitors who lack the strong identifiers necessary to link web-based behavioral insights with other activation channels such as email.
+Background
+What is lead capture?
+Traditionally, lead capture involves gathering information from individuals interested in your products or services, such as names, email addresses, and phone numbers. This occurs when people visit your website, subscribe to your newsletter, download resources, or interact with your content. However, in recent years, the role of lead capture within your global consumer engagement strategy has undergone significant transformation.
+Why is it important?
+See it in action.
+Lytics' real-time personalization engine lets you first identify the current web visitor, programmatically review their profile, and ultimately decide if a campaign should be delivered to their browser to close gaps in that profile.
+
+Instructions
+Below, you'll find a detailed guide on how to execute this use case. At the end, you'll find additional reading, which will help you learn how to extend and customize this use case further.
+Requirements
+Install Lytics Core SDK
+Before executing this use case, your website must be properly configured with the core Lytics SDK (JavaScript tag). Please refer to ourinstallation documentationto confirm the tag is present before continuing.
+Activate Required Attributes
+As an admin user of Lytics, you canenable or disable any attributesfrom being surfaced to the web via our JavaScript SDK. Depending on how your account has been configured, you may need to allow some of the required attributes for this particular use case.
+Required Attributes:
+Configure Web Experience
+To execute this use case, we will launch a simple lead capture form at the bottom left of your site. The lead capture will focus on collecting email addresses for the user and use a generic "dark" theme along with some boilerplate messaging. For best results, we recommend leveraging an offer of some sort that will resonate with your customers to entice them to "sign up" and identify themselves. In return, you'll gain much knowledge about this visitor, strengthen your consumer record, and unlock the ability to connect in channels outside of just the web.
+Bonus Idea
+You can extend this use case to progressively improve your visitor profiles by surfacing data capture forms specific to gaps in their profile data. For instance, when they are unknown, only ask for email. As soon as you have an email, perhaps you want to know more about their preferences or learn how to improve a particular portion of your product/offering.
+Configure Reporting
+The Lytics platform has a pre-defined schema to facilitate this use case. As such, we recommend building acustom reportfrom within our UI to showcase your progress in converting unknown or anonymous visitors to known visitors with a strong identifier. There are many ways to configure this type of reporting, but here we'll guide you through a basic example to measure impact.
+
+Create New Report
+Add Anonymous vs. Known "Size" Component
+Step 1:Once you have created your new report, add a component using the "+ Add New Component" button at the top of the report.
+Step 2:Select "Size" as your component type.
+Step 3:Name your component. We recommend something simple like "Anonymous vs. Known".
+Step 4:Add an optional description to explain the goal of this report to ease the consumption for others later.
+Step 5:Select the audiences you'd like to highlight. In this use case, we'll select "Anonymous Profiles" and "Known Profiles", which are both available by default.
+Step 6:Save your component. Please note it may take some time for the report to populate once you have configured it, but as long as you see the empty "Not enough data" state, you are good to go.
+Add Impression "Composition" Component
+Step 1:Following steps similar to the previous component, we'll add another component, but this time, we use the "Composition" component type.
+Step 2:Name your component "Campaign Impressions," as this component will focus on showcasing impression information to validate that the campaign is being shown.
+Step 3:Select the "All" audience to ensure all visitors, regardless if they are known or unknown, are included in the report.
+Step 4:Select the field "ly_impressions." This field represents an array of all campaigns each visitor has interacted with and is available by default. The values returned for custom campaigns will match the "ID" you set above in the campaign configuration.
+Step 5:Finally, replace "my_campaign_id" in the example below with the ID of your campaign above to highlight only interactions for that campaign.
+Add Conversion "Composition" Component
+Following the same steps as above, configure another "Composition" component, but this time, use the field "ly_conversions" as it will be an array of all campaigns your users have converted on instead of the impressions used previously.
+Thats it. Your report has been configured. As you begin to gain impressions and conversions, this report will populate. Generally, every hour or two, to highlight the impact.
+Bonus!
+Get additional guidance on how to pass interaction information related to your campaign to the following common sources for additional reporting and insight discovery:
+Execute Your Experience
+Once you have configured and tested your Experience, activation is as simple as publishing the JavaScript code to your site. This may be done via a tag manager like Google Tag Manager or using another mechanism such as Drupal blocks or WordPress.
+Updated12 months ago
+Quick Start
+Account Management
+Key Concepts
+Pipeline & Profiles
+Warehouse Access
+Audiences & Activation
+Tutorials
+SDKs & Tools
+Integrations
+Partners
+Legacy
+Lead Capture
+TL;DR
+This document outlines how to leverage Lytics' real-time personalization engine to identify visitors who lack the strong identifiers necessary to link web-based behavioral insights with other activation channels such as email.
+Background
+What is lead capture?
+Traditionally, lead capture involves gathering information from individuals interested in your products or services, such as names, email addresses, and phone numbers. This occurs when people visit your website, subscribe to your newsletter, download resources, or interact with your content. However, in recent years, the role of lead capture within your global consumer engagement strategy has undergone significant transformation.
+Why is it important?
+See it in action.
+Lytics' real-time personalization engine lets you first identify the current web visitor, programmatically review their profile, and ultimately decide if a campaign should be delivered to their browser to close gaps in that profile.
+
+Instructions
+Below, you'll find a detailed guide on how to execute this use case. At the end, you'll find additional reading, which will help you learn how to extend and customize this use case further.
+Requirements
+Install Lytics Core SDK
+Before executing this use case, your website must be properly configured with the core Lytics SDK (JavaScript tag). Please refer to ourinstallation documentationto confirm the tag is present before continuing.
+Activate Required Attributes
+As an admin user of Lytics, you canenable or disable any attributesfrom being surfaced to the web via our JavaScript SDK. Depending on how your account has been configured, you may need to allow some of the required attributes for this particular use case.
+Required Attributes:
+Configure Web Experience
+To execute this use case, we will launch a simple lead capture form at the bottom left of your site. The lead capture will focus on collecting email addresses for the user and use a generic "dark" theme along with some boilerplate messaging. For best results, we recommend leveraging an offer of some sort that will resonate with your customers to entice them to "sign up" and identify themselves. In return, you'll gain much knowledge about this visitor, strengthen your consumer record, and unlock the ability to connect in channels outside of just the web.
+Bonus Idea
+You can extend this use case to progressively improve your visitor profiles by surfacing data capture forms specific to gaps in their profile data. For instance, when they are unknown, only ask for email. As soon as you have an email, perhaps you want to know more about their preferences or learn how to improve a particular portion of your product/offering.
+Configure Reporting
+The Lytics platform has a pre-defined schema to facilitate this use case. As such, we recommend building acustom reportfrom within our UI to showcase your progress in converting unknown or anonymous visitors to known visitors with a strong identifier. There are many ways to configure this type of reporting, but here we'll guide you through a basic example to measure impact.
+
+Create New Report
+Add Anonymous vs. Known "Size" Component
+Step 1:Once you have created your new report, add a component using the "+ Add New Component" button at the top of the report.
+Step 2:Select "Size" as your component type.
+Step 3:Name your component. We recommend something simple like "Anonymous vs. Known".
+Step 4:Add an optional description to explain the goal of this report to ease the consumption for others later.
+Step 5:Select the audiences you'd like to highlight. In this use case, we'll select "Anonymous Profiles" and "Known Profiles", which are both available by default.
+Step 6:Save your component. Please note it may take some time for the report to populate once you have configured it, but as long as you see the empty "Not enough data" state, you are good to go.
+Add Impression "Composition" Component
+Step 1:Following steps similar to the previous component, we'll add another component, but this time, we use the "Composition" component type.
+Step 2:Name your component "Campaign Impressions," as this component will focus on showcasing impression information to validate that the campaign is being shown.
+Step 3:Select the "All" audience to ensure all visitors, regardless if they are known or unknown, are included in the report.
+Step 4:Select the field "ly_impressions." This field represents an array of all campaigns each visitor has interacted with and is available by default. The values returned for custom campaigns will match the "ID" you set above in the campaign configuration.
+Step 5:Finally, replace "my_campaign_id" in the example below with the ID of your campaign above to highlight only interactions for that campaign.
+Add Conversion "Composition" Component
+Following the same steps as above, configure another "Composition" component, but this time, use the field "ly_conversions" as it will be an array of all campaigns your users have converted on instead of the impressions used previously.
+Thats it. Your report has been configured. As you begin to gain impressions and conversions, this report will populate. Generally, every hour or two, to highlight the impact.
+Bonus!
+Get additional guidance on how to pass interaction information related to your campaign to the following common sources for additional reporting and insight discovery:
+Execute Your Experience
+Once you have configured and tested your Experience, activation is as simple as publishing the JavaScript code to your site. This may be done via a tag manager like Google Tag Manager or using another mechanism such as Drupal blocks or WordPress.
+Updated12 months ago
+Quick Start
+Account Management
+Key Concepts
+Pipeline & Profiles
+Warehouse Access
+Audiences & Activation
+Tutorials
+SDKs & Tools
+Integrations
+Partners
+Legacy
+Content Recommendations
+TL;DR
+This document details the process of utilizing Lytics' real-time personalization engine to showcase content that resonates with a visitor's interests. This can be implemented directly inline or through a pop-up modal on your website to boost engagement.
+Background
+How does Lytics make content recommendations?
+Lytics Interest Engines provides a sophisticated approach for businesses to gain and leverage insights into which content is most likely to resonate based on behavioral patterns. This is achieved through a detailed enrichment and affinity generation process in real-time. While full details are available in Lytics' comprehensive documentation, the core process can be distilled into four key steps:
+This streamlined framework enables real-time personalization, enhancing user experience by continuously adapting to evolving visitor interests.
+Why is it important?
+Relevant content for individual users boosts marketing effectiveness and ROI by increasing engagement and conversion rates. Personalized content meets users' interests, leading to better resource utilization and higher customer retention. This targeted strategy enhances sales opportunities and brand perception, directly improving return on investment.
+See it in action.
+Lytics' real-time personalization engine lets you first identify the current web visitor, programmatically review their profile, and deliver one or more pieces of content based on their unique interests to maximize engagement.
+Instructions
+Below, you'll find a detailed guide on how to execute this use case. At the end, you'll find additional reading, which will help you learn how to extend and customize this use case further.
+Requirements
+Install Lytics Core SDK
+Before executing this use case, your website must be properly configured with the core Lytics SDK (JavaScript tag). Please refer to ourinstallation documentationto confirm the tag is present before continuing.
+Interest Scores & Content Collections
+Your content must be classified before Lytics can offer content recommendations or insights. Typically, this classification process takes 24 to 48 hours, though it may extend if your catalog is particularly large. To ensure the health of your content graph and interest engines, there are a few key areas to focus on:
+Verify Interest Scores on Profile
+Verify Content has Been Classified
+📘
+If you have not already verified the quality of classification and metadata, please refer to ourquickstart documentation.
+From the Lytics interface, navigate toDecision Enginefrom the product switcher at the top left.
+Using the left-hand menu, navigate toContent>Collections.
+From the list of collections, there is likely only one; look forAll Contentin the list and the rowsSize. This refers to the number of documents classified; it should be greater than one and reflect your total catalog.
+For greater detail, you can also visitContent>Web Classification.
+At the top of that page will be a summary dashboard of all content that has been successfully classified and cataloged. Most notably, theAll Documentscount under theURL Pathcomponent.
+Select a content collection.
+We will use the default collection outlined below for this exercise, but you may also create a custom collection with a subset of your content to recommend.
+📘
+Ready to go a step farther and build a custom collection of your content to ensure recommendations are selected from a more currated set of documents? Check out our fulldocumentation.
+Activate Required Attributes & Segments
+As an admin user of Lytics, you canenable or disable any attributesfrom being surfaced to the web via our JavaScript SDK. Depending on how your account has been configured, you may need to allow some of the required attributes for this particular use case.
+Required Attributes:
+Configure Web Experience
+To execute this use case, we will demonstrate two examples. The first will be a single content recommendation in a popup style modal, while the second will leverage Pathfora to add a set of recommendations inline to your website.
+Example 1: Content Recommendation Modal
+
+Example 2: Inline Content Recommendation
+In this example, we'll use a generic Drupal Block with pure HTML and CSS, but the same approach can be taken using WordPress or a third-party tag manager such as Google Tag Manager.
+Updated12 months ago
+Quick Start
+Account Management
+Key Concepts
+Pipeline & Profiles
+Warehouse Access
+Audiences & Activation
+Tutorials
+SDKs & Tools
+Integrations
+Partners
+Legacy
+2. Content Setup
+Lytics' Interest Engines effectively analyze your content with minimal effort required. However, to guarantee that the classification results align with your expectations, conducting a quick test is advisable, as poor metadata can sometimes lead to less-than-optimal outcomes. The most reliable method to ensure comprehensive and satisfactory content classification is to classify a selection of your URLs manually.
+Updated5 months ago
+Quick Start
+Account Management
+Key Concepts
+Pipeline & Profiles
+Warehouse Access
+Audiences & Activation
+Tutorials
+SDKs & Tools
+Integrations
+Partners
+Legacy
+2. Content Setup
+Lytics' Interest Engines effectively analyze your content with minimal effort required. However, to guarantee that the classification results align with your expectations, conducting a quick test is advisable, as poor metadata can sometimes lead to less-than-optimal outcomes. The most reliable method to ensure comprehensive and satisfactory content classification is to classify a selection of your URLs manually.
+Updated5 months ago
+Quick Start
+Account Management
+Key Concepts
+Pipeline & Profiles
+Warehouse Access
+Audiences & Activation
+Tutorials
+SDKs & Tools
+Integrations
+Partners
+Legacy
+What is Vault?
+Introduction
+Vault is a centralized hub for managing security and other administrative features in Lytics. It provides a single place for Lytics admins to access and change their key security features and user permissions, regardless of product. This means that the controls set in Vault apply to Conductor, Decision Engine, Cloud Connect, and any other products associated with your Lytics account.
+Take a quick tour of Lytics Vault.
+Navigating Vault
+Vault is comprised of the following sections:
+Who can access Vault?
+Vault is focused primarily on account admins or those that have permission to administer settings, user access, etc. Based upon these permissions, your experience in Vault may vary, and all sections outlined above may not be available.
+📘
+If you are unable to access a section please reach out to your account administrator to request those adjusted permissions.
+In general, Admins will be able to access all areas. Data Managers, Campaign Managers, Experience Managers, and Goal Managers can access the Authorizations section to manage the credentials for their jobs and experiences. Finally, all Lytics users, regardless of role, should have access to view the JavaScript tag installation page under Account Setup, and they should be able to view their user profile where they can change details such as their Name, Email Address, Phone Number (for two-factor authentication) and change their password. Your user profile will be accessible under the main Lytics navigation under "Manage My Profile."
+Notable Changes
+For existing customers, slight changes will impact your day-to-day management activities.
+Product Switcher
+Vault will be available directly from the primary product switcher at the top left of your Lytics interface. This will be your primary access point for account management from now on.
+Account Usage
+Our account usage data and quota meters received a much-needed facelift. The usage metrics act as the Vault "dashboard" for admin users.
+
+Account Settings
+Account setting sections are now accessible through the main navigation. These settings have received a minor facelift update. The form controls for multi-text fields have been slightly updated for a more standard user experience. In addition, users are now prompted to save or discard their changes when navigating away from these pages with unsaved settings.
+Users
+The user list is now sortable and filterable based on name, email, who invited them, and how long they've been a Lytics user. Each user has a page to view their details and roles. In Vault, in addition to assigning new roles, an administrator can edit any user's name and email address.
+
+The user invite form is now on its page to improve the flow and experience of inviting users. Roles are now sorted into two categories - Admin or Custom Roles. An admin inherently has access to everything, while custom roles give a finer-grain definition of what the user can access. The details on each role are shown in a tooltip when you hover over the role name.
+
+Access Tokens
+The access tokens list is now sortable and filterable based on the name, description, the creator of the token, or when/if it has expired. You can now view additional details about the access tokens you've already created, such as the roles assigned, when it was made, and when it will expire. In addition, new access tokens can now be assigned as an admin or with any combination of more granular access roles.
+
+Authorizations
+Authorizations are now to be created and updated only in Vault. You will still be able to utilize the auths you create in Vault in other products, but for example, when creating a job in Conductor or Decision Engine, if you don't see an authorization you want to use for that job, you will be linked into the authorizations wizard within Vault to create the auth.
+
+JavaScript Tag Installation
+This page remains unchanged, with simple styling changes and updated links to our documentation for troubleshooting.
+Updatedover 1 year ago
+Quick Start
+Account Management
+Key Concepts
+Pipeline & Profiles
+Warehouse Access
+Audiences & Activation
+Tutorials
+SDKs & Tools
+Integrations
+Partners
+Legacy
+Accessing Accounts
+Introduction
+Under the account menu in the main navigation, find the Account Settings option.
+You should see your account information, such as the name of your account, domain, the account owner's email, and more.
+You can edit your account name, domain, and primary contact email from this page anytime. Once you change one of these values, you will be prompted to save or undo the changes.
+Account ID and account number are never editable. They are assigned at account creation and are permanent identifiers.
+Navigating Accounts
+For users who have access to multiple accounts, you can quickly and securely navigate between Accounts using our account switcher at the bottom right of the primary navigation:
+1. Click "Switch Account"
+2. Select Account
+A menu will appear outlining the accounts you have access to. Simply select an account and a new tab will open with this accounts dashboard.
+Updatedover 1 year ago
+Quick Start
+Account Management
+Key Concepts
+Pipeline & Profiles
+Warehouse Access
+Audiences & Activation
+Tutorials
+SDKs & Tools
+Integrations
+Partners
+Legacy
+Monitoring Metrics and Alerts
+How to monitor Lytics, and alert when help is needed.
+Monitoring
+Monitoring and alerting is available on every job and every authorization within Lytics.
+To set up alerting on your jobs or authorizations, you can set up a monitoring job from either the Job API or the Lytics UI for alerting toSlack,Microsoft Teams, or directly toemail.
+If a source or destination job has failed, Lytics will show the latest error message on the Conductor Diagnostics Dashboard and on the Logs tab of the Source/Destination Job Summary interface, and allow the job to be restarted if needed. The most detailed information for troubleshooting can be accessed from theJob Logs API
+Additional generic monitoring on the Lytics system is available on our status page atlytics.statuspage.io.
+Updated12 months ago
+Quick Start
+Account Management
+Key Concepts
+Pipeline & Profiles
+Warehouse Access
+Audiences & Activation
+Tutorials
+SDKs & Tools
+Integrations
+Partners
+Legacy
+Job Alerts
+Monitor and alert on your import and export workflows
+As systems are updated, permissions change, and networks are reconnected, sometimes situations will be encountered that cannot be resolved by theautomated error handling and resolutionbuilt into Lytics Jobs. Lytics provides alerting through Slack, Microsoft Teams and email on import and export Jobs to allow your teams to respond when needed.
+Job Alerting Channels
+Slack
+Microsoft Teams
+Email Alerting (Lytics Monitoring)
+Keep in Mind!
+Alerts can be configured for specific workflows, or for all workflows running in the account.Consider having one general alert to an Operations Channel or Team for all alerts, or alerts for specific workflows managed by particular teams
+Consider which statuses to includeAlerts can be configured for statuses aside from failures. Workflows like critical batch import workflows can send a confirmation on successful syncs as well.
+Understanding errorsIf a source or destination job has failed, Lytics will show the latest error message on the Conductor Diagnostics Dashboard and on the Logs tab of the Source/Destination Job Summary interface, and allow the job to be restarted if needed. The most detailed information for troubleshooting can be accessed from the Job Logs API.
+Updated12 months ago
+Quick Start
+Account Management
+Key Concepts
+Pipeline & Profiles
+Warehouse Access
+Audiences & Activation
+Tutorials
+SDKs & Tools
+Integrations
+Partners
+Legacy
+3. Surface Personalized Message
+The Lytics Personalization Engine profiles real-time access to a comprehensive visitor profile. Before we jump into the weeds of how you can fully build and leverage this profile, let's create our first experience.
+Surface a Simple Message
+Lytics comes with our Personalization SDK called Pathfora. Pathfora allows you to easily surface simple lead capture and messaging modals or content directly inline. Fulldocumentationfor Pathfora is available, but initially, let's surface a welcome message to ouranonymous visitoraudience.
+Alter the Pathfora configuration to your liking.
+Install the Pathfora configuration onto your site via your preferred tag management method.
+Refresh the page and be greeted with your new welcome message targeted at anonymous visitors!
+
+Lytics and Pathfora provide a great deal of flexibility. If you are ready to dive deeper, please explore some of our other popular use cases:
+Updated6 months ago
+Quick Start
+Account Management
+Key Concepts
+Pipeline & Profiles
+Warehouse Access
+Audiences & Activation
+Tutorials
+SDKs & Tools
+Integrations
+Partners
+Legacy
+3. Surface Personalized Message
+The Lytics Personalization Engine profiles real-time access to a comprehensive visitor profile. Before we jump into the weeds of how you can fully build and leverage this profile, let's create our first experience.
+Surface a Simple Message
+Lytics comes with our Personalization SDK called Pathfora. Pathfora allows you to easily surface simple lead capture and messaging modals or content directly inline. Fulldocumentationfor Pathfora is available, but initially, let's surface a welcome message to ouranonymous visitoraudience.
+Alter the Pathfora configuration to your liking.
+Install the Pathfora configuration onto your site via your preferred tag management method.
+Refresh the page and be greeted with your new welcome message targeted at anonymous visitors!
+
+Lytics and Pathfora provide a great deal of flexibility. If you are ready to dive deeper, please explore some of our other popular use cases:
+Updated6 months ago
+Quick Start
+Account Management
+Key Concepts
+Pipeline & Profiles
+Warehouse Access
+Audiences & Activation
+Tutorials
+SDKs & Tools
+Integrations
+Partners
+Legacy
+Monitoring Audit Logs
+Account Activity Monitoring via Audit Logs API
+Audit Logsprovide visibility into system changes such as creating segments, updating schema, deleting items, new authorizations added, and users added to roles. This is a wealth of audit data about changes in your account. These events are shown in many places inside Lytics, such as the history of work sync events, status changes, work failures due to expiring authorization, or password changes on the source for OAuth tokens.  See ourSystem Events API documentationfor more information.
+Updated12 months ago
+Quick Start
+Account Management
+Key Concepts
+Pipeline & Profiles
+Warehouse Access
+Audiences & Activation
+Tutorials
+SDKs & Tools
+Integrations
+Partners
+Legacy
+Exporting Audit Logs or Alert Jobs
+Lytics System Events: Audit Logs and Alerts
+In Lytics, audit logs and system alerts originate from a shared source:Lytics System Events. A System Event is simply a log of an action taken within the platform, whether it’s a user creating a job, segment, or role, or an error message indicating a job failure.
+Export vs. Alert
+In both cases, the content of exports or alerts depends on the filters you set up. Filtering is typically done using theSubject(such as User, Segment, or Job) and theVerb(the action taken on the subject, like created, updated, deleted, or failed).
+Creating an Audit Log export (aka System Alert) Job via the UI
+Creating a job to export your Audit and System Event logs is like creating any other job; for more information, seeData Pipeline-> Jobs.    In theFilterspanel, simply selectAudit Logsto create an export of your Audit logs or System Events.
+Depending on yourProvider, you can then select to exportSystem Events.
+For example, if you selectedGoogle Cloudand you want to export the events toBigQuery.
+Then, you'd want to select theBigQuery: Export System EventsJob-Type tile.   After choosing the Job-Type, it's like configuring any other export job.  In the case of BigQuery, you can do a one-time or continuous export.
+Creating an Alert based on System Events
+Creating a job to alert on an Audit and System Event logs is like creating any other job; for more information, seeData Pipeline-> Jobs.    In theFilterspanel, simply selectAudit Logsto create an export of your Audit logs or System Events.
+Depending on yourProvider, you can then select to exportSystem EventsorEmail Alerts.
+For example, if you select to get an email when an Alert is triggered, then useLyticsas your provider and selectEmail Alerts.
+Then configure whatSubjectyou wanted to listen too and whatEvent Types (aka Verbs).
+
+Filtering Audit logs
+Audit logs can be filtered by
+Job Status Monitoring via Webhooks
+Job-status events can be observed by creating a webhook subscription that POSTs data (or JSON) to a specific URL. These updates, like email alerting and reporting, can be consumed downstream for your monitoring use cases.  Some common examples include listening for audience exports created/updated/deleted or being notified whenever a batch import or export for a given integration fails.
+Work related filters
+For events related to the subject typework, the followingverbsmay be emitted:
+Building custom Alerts/Exports using our Webhook Integration
+Overview
+Lytics provides a webhook integration that allows you to monitor and react to system events in real-time. This integration enables you to build automated workflows, trigger external actions, and maintain synchronization with your other systems based on events occurring within Lytics.
+Configuration Examples
+The following example shows how to subscribe to multiple event types and send them to a webhook endpoint:
+You can integrate Lytics system events with Slack using a custom JSON template. This example shows how to send failure notifications to a Slack channel:
+You can filter events by source type and ID using thesystem_event_sourcesconfiguration:
+To receive events for all works in your account, use an empty array.
+Best Practices
+For additional assistance or questions about webhook integration, please contact Lytics support or consult our API documentation.
+Updated4 months ago
+Quick Start
+Account Management
+Key Concepts
+Pipeline & Profiles
+Warehouse Access
+Audiences & Activation
+Tutorials
+SDKs & Tools
+Integrations
+Partners
+Legacy
+Monitoring Metrics
+Introduction
+Lytics provides a variety of valuable metrics that downstream monitoring tools, such as Google Stackdriver or New Relic, can consume. Using industry-standard, inexpensive tools built for alerting and monitoring, you can have visibility into Lytics within your existing ecosystem.
+Consuming Metrics Downstream
+Once you have connected Lytics to your monitoring tool, there are various ways you can apply metrics from Lytics to support your operational and IT audit processes. Below are a few examples:
+Platform Monitoring via Metric API
+The Metric API provides access to a variety of metrics that are recorded in the Lytics platform. This API allows you to access segment size metrics, events received per hour, and many workflow-specific metrics.
+*Availability of Metrics: the Lytics Metric API and all Lytics export workflows run inside Lytics' work runtime system in Kubernetes. During deploys or scaling events, these processes can move between servers, potentially resulting in 1 or 2-minute gaps in metrics. Therefore, alerts on single heartbeat misses are not recommended. Instead, look for a missing window of 5.
+Updated5 months ago
+Quick Start
+Account Management
+Key Concepts
+Pipeline & Profiles
+Warehouse Access
+Audiences & Activation
+Tutorials
+SDKs & Tools
+Integrations
+Partners
+Legacy
+Usage Metrics
+Account Usage Metrics
+The Account Usage section shows how many inbound and outbound events Lytics has received for your account. If your account has an inbound event quota, you will find a meter displaying how much of your inbound event quota you have used for each quota period.
+In the Lytics UI, selectVaultfrom the product switcher. Or, if you are already in Vault, selectUsagefrom the main menu.
+This view offers a quick way to gauge the quantity of data Lytics has received from your various Sources. Of course, if you would like to explore details for incoming data further you can view more granular details of all connected Sources from theConductorinterface.
+Inbound Events
+Aninbound eventis a record of activity collected or uploaded to Lytics from a customer data source, such as a record of user web activity, email opening, or an update to a subscriber record. The inbound events graph shows your total inbound events, which can be displayed daily, weekly, or monthly.
+The inbound quota meter displays the number of events recorded in the quota period, your quota limit, and the meter to gauge your usage versus your quota limit quickly. For monthly term accounts, quota periods begin on the first of each month and end on the last day of the month. For annual term accounts, quota periods begin at the start of your Lytics subscription. Quotas (unless otherwise stated in your contract) only count for production accounts.
+Monitoring the Inbound Event Quota
+Automated alerts for Inbound Event Quotas can be configured to sent toMicrosoft Teams,Slack, or directly to anemail address.
+Outbound Events
+Anoutbound eventis any record of data exported from Lytics, whether manually or automatically. The outbound events graph shows your total outbound events, which can be displayed daily, weekly, or monthly.
+Updated12 months ago
+Quick Start
+Account Management
+Key Concepts
+Pipeline & Profiles
+Warehouse Access
+Audiences & Activation
+Tutorials
+SDKs & Tools
+Integrations
+Partners
+Legacy
+Building Profiles
+Welcome to the world of building profiles with Lytics! Here, you can unlock the full potential of understanding your audience through three key aspects available right out of the box:
+Default Profile Attributes:Lytics offers a robust set of pre-packaged user attributes, including automatically generated and customizable ones. Empowered by predictive modeling and machine learning algorithms, these attributes enable you to gain deeper insights into your audience.
+Default Segments:Explore predefined user segments that categorize your audience based on behavioral and demographic factors. With no lift or custom definition required, these segments offer quick insights for tailored marketing strategies.
+Ready to dive in? Click on each section to explore the details and enhance your profiling efforts effortlessly. Looking for a recommendation? We say you should start by understanding all the available attributes.
+Updated12 months ago
+Quick Start
+Account Management
+Key Concepts
+Pipeline & Profiles
+Warehouse Access
+Audiences & Activation
+Tutorials
+SDKs & Tools
+Integrations
+Partners
+Legacy
+Building Profiles
+Welcome to the world of building profiles with Lytics! Here, you can unlock the full potential of understanding your audience through three key aspects available right out of the box:
+Default Profile Attributes:Lytics offers a robust set of pre-packaged user attributes, including automatically generated and customizable ones. Empowered by predictive modeling and machine learning algorithms, these attributes enable you to gain deeper insights into your audience.
+Default Segments:Explore predefined user segments that categorize your audience based on behavioral and demographic factors. With no lift or custom definition required, these segments offer quick insights for tailored marketing strategies.
+Ready to dive in? Click on each section to explore the details and enhance your profiling efforts effortlessly. Looking for a recommendation? We say you should start by understanding all the available attributes.
+Updated12 months ago
+Quick Start
+Account Management
+Key Concepts
+Pipeline & Profiles
+Warehouse Access
+Audiences & Activation
+Tutorials
+SDKs & Tools
+Integrations
+Partners
+Legacy
+Managing Users
+Managing Your User Profile
+To access your profile, click "Manage My User" from the account menu at the bottom of the primary navigation.
+You'll have access to personal information and usage statistics from the resulting profile page. It doubles as an ID card and a stats card.
+You can edit your name and email address. Both fields are required. A phone number is only required for 2FA.
+Click the "Change Password" button to change your password.
+Resetting Passwords
+The password must be reset by the user whose password is being reset.Passwords cannot be reset on behalf of others.
+To reset your password, go toManage My Profilein the account menu and click theChange Passwordbutton.
+A modal will open, prompting for a new password can be entered.
+🚧
+Changing a password will immediately invalidate all current sessions across all machines for the user.
+Managing Account Users
+Click "Manage Users" in the account menu to manage account users.
+Modifying User Permissions
+User roles define the amount of access and permissions a Lytics user has when logged in and through theLytics APIs.
+A user may have any number of these roles, and the permissions for multiple roles are additive. For example, a user with the Campaign Manager and Content Manager roles will have access to all permissions granted by both roles.
+Users with the Admin role can control other users' roles within your organization via the "Manage Users" option from the account dropdown menu.
+Managing Personally Identifiable Information
+You can indicate any user fields in your account that contain Personally Identifiable Information (PII) via the private fields account setting. These fields will be hidden for anyone who does not have Admin, Data Manager, or User Search roles. You should verify withLytics Supportthat the field hiding in the segment scan is also enabled for your account to ensure these fields are hidden there.
+What does a user of each role have access to?
+A user's role determines which parts of the Lytics app they can access. Here is a breakdown of what is shown in the navigation for each role.
+For access to look-a-like models you will need to be an accountadminor have a combination ofDiscovery Insight+ a role that gives access toJobs/Auths.
+What tasks can a user of each role perform?
+Roles define a set of permissions the user has, which also dictates what actions they can take in the app and through the APIs. Here is a breakdown of the permissions for each role by feature.
+Personally Identifiable Information (PII)
+To shield PI from users who should not have access, you will need to use the private fields account setting to mark the profile fields you want to hide from anyone who does not have Admin, Data Manager, or User Search roles.
+Audiences (without PII)
+Content Topics
+Content Collections
+Authorizations (for imports & exports)
+Jobs (imports & exports)
+The former "Integrations" tab is now comprised of the "Jobs" and "Authorizations" sections, which allow you to manage your import and exports.
+Accounts & Users
+Personalize Campaigns
+Additional API-Only Features
+All roles have API read access to topic rollups, segment collections, and SegmentML. Marked below are the roles with full CRUD access to these features.
+Inviting Users
+Click theCreate Newbutton from the user list to invite a new user to the account.
+Inviting a new user will prompt for an email address and roles to select the appropriate level of access the user will have within your Lytics account. Upon completing this form, the new user will get an email with a link that will take them to the Lytics account login screen.
+Removing Users
+From the user list, select the user you wish to delete. You can remove this user from Lytics by clicking theDelete Userbutton from their profile page.
+Updatedover 1 year ago
+Quick Start
+Account Management
+Key Concepts
+Pipeline & Profiles
+Warehouse Access
+Audiences & Activation
+Tutorials
+SDKs & Tools
+Integrations
+Partners
+Legacy
+Single Sign-On
+🚧
+Lytics supports Single Sign-On (SSO) by using Google Cloud Identity Platform as a service provider using SAML protocol. Lytics integrates with Identity Providers (IdPs) in such a way that the Service Provider (SP) initiates SSO.IDP-initiated SSO has been deprecated and is no longer supported by Lytics.
+Overview
+Single Sign-On (SSO) allows employees to safely and securely access a host of Internet tools with a single username and password. There are four primary reasons why your business should consider leveraging Single Sign-On:
+SSO helps the end user.Implementing SSO means employees are required to commit just one password to memory. With one password to remember, a user can easily create and remember a unique and secure password without writing it down. SSO reduces password fatigue and frustration and makes the employee more efficient.
+SSO benefits the company.Fewer passwords to remember equals fewer calls to the helpdesk, resulting in more time spent on other tasks for both the end user and IT. Fewer calls to the helpdesk (which is oftentimes outsourced) means a reduction in cost to the company as well.
+SSO improves security.When employees are required to remember numerous passwords, it is easy to fall into lazy habits, such as using simple, easy-to-remember passwords, which are more susceptible to hacking. Or writing passwords down on Post-it notes where they can easily be stolen or fall into the wrong hands.
+SSO helps with compliance.SSO helps companies increase control over the user's access to certain information as well as easily enforce password change policies. This makes it simpler for organizations to comply with HIPAA, SOX, and other regulatory groups.
+SP-Initiated SSO
+Lytics supports enterprise Single Sign-On (SSO) by usingGoogle Cloud Identity Platformas a service provider usingSAML protocol. Lytics integrates with Identity Providers (IdPs) in such a way that the Service Provider (SP) initiates SSO.
+Once implemented, users will log in to Lytics via aspecial SSO formthat only requires an email address. Lytics will recognize the email address and open a pop-up to the user's IdP to complete the login. Once the IdP verifies credentials, the pop-up will close, redirecting the user to a logged-in instance of their Lytics dashboard. Behind the scenes, a customer's IdP will communicate with the Lytics APIs, which useGoogle Cloud Identity Platformto validate the login. This document describes the process for integrating with a new IdP that uses SAML.
+Service Provider Configuration
+To configure SAML for the Lytics service provider, some information is required about your IdP. If you have a metadata file that contains SAML provider information, this may be appropriate, but please ensure that the following information is provided toLytics Support:
+Further configuration details, such as mappings, may need to be provided, but the Lytics implementation only requires the email address field to be mapped. Once this information has been received, Lytics can configure the SAML connection in the Google Cloud Identity Platform.
+IdP Configuration
+After Lytics configures the SAML connection on the service provider,Lytics Supportwill provide the following key fields of information to the customer to complete the configuration in their IdP.
+With this information, your IdP connection can be configured to complete the SSO integration.
+📘
+At this time, Lytics does not support providing this information in an XML metadata file. Additional information about the Service Provider may be provided on request.
+Testing SSO
+Once all the information has been configured in both the IdP and the Lytics service provider, you can test and verify that the SSO implementation works as expected. If you are using SSO as your only sign-in method, please disable any password restriction or expiration settings that may have been enabled in the UI.
+During the testing process, Lytics can be configured to allow both SSO login and regular username and password (or Google OAuth) login through the app. This allows users to test SSO without disrupting the day-to-day usage of the app.
+If requested, once the SSO implementation has been tested and verified, Lytics can disable the use of other login types for an account.
+Troubleshooting SSO
+If it's known that SSO will be added to an account, the user email addresses added to the account should match the email address present within the IdP. If the email address doesn’t match, the login will fail as Lytics will not be able to verify that there is a user with that email address.
+For instance, if the email listed in the IdP isabc@123and within Lytics, it isdef@456, then there will be potentially multiple error points for a user trying to log in via the SSO form on Lytics.
+If the user entersabc@123into the IdP pop-up, it will immediately fail as we use the Lytics account user to determine which IdP to redirect to. You would see an error message like the following:
+
+However, should the user enterdef@456(their Lytics account email), they will be redirected to their IdP, but the verification of the login will fail once information is sent back to Lytics.
+To remedy this situation, you would need to create a new user within Lytics with the email addressabc@123for the SSO login to be successful.  You can check, add, and remove users for an account using theManaging Usersguide as a reference.
+Lytics Supportcan assist in the troubleshooting process. When testing for the first time, Lytics can enable logging to help troubleshoot any issues you encounter. With this, the team can help debug if you provide information on the login attempt, such as the login time, user, and account.
+If you’re encountering a verification error, but you've checked that your emails from the IdP and Lytics match, this may be an issue with the SAML configuration either on the IdP or SP side. ContactLytics Supportwith details of the issue, and our team can coordinate a fix.
+Account Structure with SSO
+It should also be noted that primary accounts (master accounts) are decided as the first account that a user was added to.  Due to this,  users from a single group/organization will often have different primary accounts. This is important for SSO as it will also be the account the user is logged into at the start of their session. If SSO is enabled as the only means of login on one account and a user attempts to log in using Google OAuth or their username and password, the login session will fail. The following options are possible solutions:
+Assigning Roles using SSO
+Configuring Role Assertions for SSO in Lytics
+The Lytics team can configure Single Sign-On (SSO) to assign roles via SSO. This configuration must be applied to the primary (master) accounts and any additional accounts to which users need access. For more information, refer to theaccount structure with SSO.
+Important Note:Users cannot be assigned to additional accounts via SSO alone; they must be manually invited to each Lytics account to which they need access.
+To set up role assignments via SSO, customers must configure their Identity Provider (IDP) to include a group assertion for each account the user can access. The role of each user must be specified in the format:lytics_<AID>_<Role>
+Example of a SAML assertion for a user whose default account is 123 and also has access to account 234:
+Note: This example is simplified to focus only on the group's assertion; a real-world example would be more detailed.
+Assignable roles
+The following roles can be assigned:
+Implementing SSO with Okta
+This document will walk you through how to implementSingle Sign-Onto the Lytics application withOktaas an identity provider. Lytics has applied to become an official Okta partner application. Still, while the partnership is being established, you can follow these instructions to set up the custom application in Okta, which covers the IDP configuration portion of the implementation.
+From your Okta Administration panel, navigate toApplicationsand thenAdd ApplicationandCreate New App.
+Under Platform, selectWeb, and for Sign on Method, chooseSAML 2.0.
+UnderGeneral Settings, you can enter the following values:
+UnderSAML Settings, enter the following values:
+📘
+NOTE: Thehttps://api.lytics.io/api/user/ssoURL should only be used for Okta. Other SSO providers use the default URLhttps://api.lytics.io/api/user/verifyauth
+Click through the next step, and selectFinish.
+You can add users to view this application in their portal using theAssignmentstab.
+Navigate to theSign Ontab. And under settings, click onView Setup Instructions.
+You will need to gather the information on this page and send it to Lytics for configuration of the Service Provider:
+Once Lytics has completed the service provider implementation, you may begin to test the SSO implementation through your Okta portal.
+Implementing SSO with OneLogin
+This document will walk you through how to implementSingle Sign-Onto the Lytics application withOneLoginas an identity provider. You can follow these instructions to set up the custom application in OneLogin, which covers the IDP configuration portion of the implementation.
+Once Lytics has completed the service provider implementation, you may begin to test the SSO implementation through your OneLogin portal.
+Updated4 months ago
+Quick Start
+Account Management
+Key Concepts
+Pipeline & Profiles
+Warehouse Access
+Audiences & Activation
+Tutorials
+SDKs & Tools
+Integrations
+Partners
+Legacy
+Account Settings
+Several account settings can be managed within the Vault interface. To access account settings, select "Vault" from the product switcher at the top left of the Lytics interface or "Account Settings" from the secondary account menu at the bottom left.
+Configuration Options
+Account Details
+Configuration options related to your primary account. Here, you can adjust your account name and primary contact and access your account ID or AID.
+JavaScript Tag
+Configuration options related to the core Lytics SDK, such as client-side integration configuration, Pathfora Personalization SDK settings, and caching preferences.
+Lytics API
+Configuration options related to the Lytics Personalization API. Here, you'll be able to manage detailed access settings, what data is surfaced, and more.
+Content
+Configuration options related to Lytics' content classification services. Here, you'll be able to configure settings related to what domains are classified, topics that should be blocked, and more.
+Security
+Configuration options related to account security, such as password complexity, session duration, and two-factor authentication.
+AI & Modeling Controls
+Configuration options related to Lytics' suite of AI and modeling capabilities such as private fields.
+Schema Controls
+Configuration options related to your core profile schema
+Accessing Vault
+Updatedabout 1 year ago
+Quick Start
+Account Management
+Key Concepts
+Pipeline & Profiles
+Warehouse Access
+Audiences & Activation
+Tutorials
+SDKs & Tools
+Integrations
+Partners
+Legacy
+Account Details
+Configuration of account details such as name and primary contact.
+The following configuration options are available within the account settingsAccount Detailssection.
+Account Name
+Domain
+Contact
+Allow Access via API
+Account ID (Non-configurable)
+Account Number (Non-configurable)
+Updatedabout 1 year ago

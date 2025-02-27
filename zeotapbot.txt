@@ -1,0 +1,100 @@
+import requests
+import google.generativeai as genai
+from bs4 import BeautifulSoup
+import requests.compat
+import time
+
+# Configure Gemini API
+genai.configure(api_key="AIzaSyAnb4Nx6pi82_vyJnxhhq5Il6CnE9GcWdQ")
+
+def crawl_docs(base_url, allowed_prefix, visited=None, max_depth=2, depth=0, max_links=5):
+    """
+    Recursively crawls pages starting at base_url.
+
+    For each page:
+      1. Gets the entire HTML (response.text) and adds it to content.
+      2. Finds all links on that page whose URL starts with allowed_prefix and that have not been visited.
+      3. Limits the links to max_links.
+      4. First recurses into the first subroute link encountered before processing remaining links.
+
+    This way, the full HTML of the current page is captured before moving to the first subroute.
+    """
+    if visited is None:
+        visited = set()
+    if depth > max_depth:
+        return ""
+
+    content = ""
+    try:
+        print(f"Crawling: {base_url}")
+        response = requests.get(base_url)
+        if response.status_code != 200:
+            print(f"Failed to fetch {base_url}")
+            return ""
+
+        # Save the full HTML content of the current page.
+        current_html = response.text
+        content += current_html + "\n"
+        visited.add(base_url)
+
+        # Parse the page to find subroute links.
+        soup = BeautifulSoup(current_html, "html.parser")
+        valid_links = []
+        for link in soup.find_all("a", href=True):
+            href = link["href"]
+            # Resolve relative URLs.
+            if not href.startswith("http"):
+                href = requests.compat.urljoin(base_url, href)
+            # Only add links that match the allowed prefix and have not been visited.
+            if href.startswith(allowed_prefix) and href not in visited:
+                valid_links.append(href)
+
+        valid_links = valid_links[:max_links]
+
+        if valid_links:
+            # First, recursively follow the FIRST subroute encountered.
+            content += crawl_docs(valid_links[0], allowed_prefix, visited, max_depth, depth + 1, max_links)
+            # Then process any remaining subroute links.
+            for link in valid_links[1:]:
+                content += crawl_docs(link, allowed_prefix, visited, max_depth, depth + 1, max_links)
+                time.sleep(0.5)  # be polite to the server
+    except Exception as e:
+        print(f"Error crawling {base_url}: {e}")
+    return content
+
+mparticle_base = "https://docs.mparticle.com/guides/"
+mparticle_docs = crawl_docs(mparticle_base, mparticle_base, max_depth=2, max_links=5)
+
+soup = BeautifulSoup(mparticle_docs, "html.parser")
+sdata = [tag.get_text(strip=True) for tag in soup.find_all(["h1", "h2", "h3", "p"])]
+
+# url = "https://segment.com/docs/"
+scraped_data = sdata #fetch_html(url)
+
+if scraped_data:
+    formatted_data = "\n".join(scraped_data)  # Convert list to string
+else:
+    print("Failed to scrape data.")
+
+
+# Function to ask Gemini with strict limitations
+def ask_chatbot(question):
+    model = genai.GenerativeModel("gemini-2.0-flash")
+
+    prompt = f"""
+    You are a support chatbot that strictly answers based on the provided documentation.
+    If the question is unrelated or the answer is not in the data, respond with "I can only provide information from the Segment documentation."
+
+    Documentation:
+    {formatted_data}
+
+    Question: {question}
+    """
+
+    response = model.generate_content(prompt)
+    return response.text.strip()
+
+# Example query
+question = "How audiences are forwarded? Info of its patterns?"
+answer = ask_chatbot(question)
+print(answer)
