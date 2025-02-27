@@ -1,6 +1,6 @@
 import streamlit as st
 import requests
-from google import genai 
+import google.generativeai as genai
 from dotenv import load_dotenv
 import os
 
@@ -9,11 +9,11 @@ load_dotenv()
 
 api_key = os.getenv("GEMINI_API_KEY")
 if api_key:
-    client = genai.Client(api_key=api_key)
+    genai.configure(api_key=api_key)
 else:
     print("API key not found. Please set GEMINI_API_KEY in the .env file.")
 
-BASE_URL = "https://raw.githubusercontent.com/007aneesh/web-chatbot/main/"
+BASE_URL = "https://github.com/007aneesh/web-chatbot/blob/main/"
 DATASETS = {
     "Segment": "segment_data.txt",
     "mParticle": "mparticle_data.txt",
@@ -34,9 +34,7 @@ def load_data(file_name):
         st.error(f"Error: {e}")
         return ""
 
-# Function to ask Gemini with strict limitations
 def ask_chatbot(question, documentation):
-    model = genai.GenerativeModel("gemini-2.0-flash")
     prompt = f"""
     You are a support chatbot that strictly answers based on the provided documentation.
     If the question is unrelated or the answer is not in the data, respond with "I can only provide information from the selected documentation."
@@ -46,13 +44,17 @@ def ask_chatbot(question, documentation):
 
     Question: {question}
     """
-    response = model.generate_content(prompt)
-    return response.text.strip()
 
-# Streamlit App
+    try:
+        model = genai.GenerativeModel(model_name='gemini-1.5-flash')
+        response = model.generate_content(prompt)
+        return response.text if hasattr(response, 'text') else "Error: Invalid response format."
+    except Exception as e:
+        return f"An error occurred: {str(e)}"
+
+
 st.title("Documentation Chatbot")
 
-# Dropdown to select the dataset
 selected_dataset = st.selectbox("Choose the documentation source:", list(DATASETS.keys()))
 
 if selected_dataset:
@@ -62,10 +64,8 @@ if selected_dataset:
     if documentation:
         st.success(f"Loaded documentation for {selected_dataset}")
 
-        # Display a text area for user query
         question = st.text_area("Ask your question:")
 
-        # Button to ask the chatbot
         if st.button("Ask Chatbot"):
             if question:
                 with st.spinner("Getting response..."):

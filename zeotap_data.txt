@@ -1,2 +1,1548 @@
 Browse by product
 Do more with Zeotap
+Browse by product
+Do more with Zeotap
+What's New in Q1 of 2025?
+Learn about the new features/enhancements released in Q1 of 2025.
+
+1. Destination Enhancements
+The below enhancements are now available in the Zeotap CDP App.
+1.1 Newly Added Destination–Snowflake (Batch+Real Time)
+Snowflake is a cloud-based data warehousing platform designed for scalable data storage, processing, and analytics. It is known for its flexibility, performance, and ease of use in handling large volumes of structured and semi-structured data.
+Integrated with Zeotap CDP, it allows you to send batched and real-time data based on the audiences (segments) and workflows created in Zeotap CDP. In this setup, you establish a connection between your Google Cloud Storage (GCS) bucket and your Snowflake account. Zeotap CDP pushes data to your GCS bucket, where you can set up automation to receive data either in batches at fixed intervals or in real-time by configuring a Pub/Sub notification for the bucket. To know more about how to create a Destination for Snowflake and use it to send data, referhere.
+1.2 Support for Amazon Consent Signal
+Effective February 7, 2025, Amazon requires including a consent string or Amazon Consent Signal (amazonAdStorage,amazonUserData) for users in the European Economic Area (EEA) and the United Kingdom (UK). Refer to theAmazon consent signal requirementsfor details. Audience uploads without consent information are rejected.
+To ensure compliance, Zeotap CDP transmits theGRANTEDAmazon Consent Signal for users who qualify in an audience. Use one of the following methods to include only consented users in an audience:
+
+2. Enhancement in Protect
+2.1 Added Support for Deleting Customer Data Using Customer Data Lifecycle
+Data Lifecycle is a systematic cleanup process that ensures your data in the system stays relevant and actionable. You can use this capability to create/define rules for deletingCustomer dataandNon-Customer Entity (NCE)records from a source when it becomes obsolete due to various reasons.
+For example, consider a scenario where a company routinely gathers data from third-party vendors concerning product feedback. Over time, certain feedback may become outdated or irrelevant, particularly if it relates to discontinued products or resolved issues. By utilising the Data Lifecycle, administrators can establish rules to automatically delete obsolete records from the system, thereby ensuring the retention of only current and actionable information.
+Now, we have enhanced theData Lifecyclemodule with the addition of theCustomer Data Lifecycletab. This feature enables a cleanup process that ensuresdemographic, behavioural, product-related, derived, and modelled dataremains relevant and actionable. To know more about how to use this feature to define rules for deleting outdated customer data from a source, referhere.
+Related Topics
+Explore the exciting product releases fromQ4 2024.
+
+
+Sign In
+
+PLATFORM NAME
+IDENTIFIERS/ATTRIBUTES SUPPORTED
+Adform
+MAIDs
+✅ Audiences
+
+Adform DMP
+
+
+✅ Audiences
+
+✅ Journeys
+✅ Audiences
+✅ Journeys
+
+Adobe Target
+
+Mbox 3rd party IDs
+
+✅ Audiences
+✅ Journeys
+Mbox 3rd party IDs
+ECID
+Adobe Target Session ID
+Mbox Edge Number
+Airship
+✅ Source
+✅ Audiences
+✅ Journeys
+Named Users
+
+Amazon DSP(New)
+Zeotap Cookie for Amazon
+MAIDs
+
+✅ Audiences
+
+Any Identifiers and Attributes
+✅Source
+✅ Audiences
+
+External User ID
+Hashed Email Addresses (SHA256)
+Hashed Cellphone Numbers (SHA256)
+First Name
+Last Name
+Address
+City
+State
+Postal
+Country Code
+✅ Audiences
+AppNexus(Xandr)
+AppNexus (Xandr) Cookies
+MAIDs
+
+✅ Audiences
+
+✅ Journeys
+Artegic Elaine
+Email Addresses (raw), First Name,Last Name, Gender andCustom Fields (any attribute/identifier)
+
+✅ Audiences
+
+✅ Source
+✅ Audiences
+✅ Journeys
+For action "Send Advertising IDs toBatch" - MAIDs
+For action "Send Custom IDs toBatch" - Custom IDs
+For action "Send Installation IDs toBatch" - Install IDsFor action "Send Attributes to Batch" -Any attributes of your choice like First Name,Last Name, Email, and more
+Braze
+
+Message Engagement Events.Learn more
+Consumer Behaviour anduser events.Learn more
+✅ Source
+✅ Audiences
+✅ Journeys
+For action "Send Identifiers toBraze" - Email addresses (raw)
+For action "Send Attributes andIdentifiers to Braze" -
+✅ Source
+✅ Audiences
+✅ Journeys
+
+
+
+​Identifiers/Attributes Supported:
+Learn More
+This integration supports Subscription IDand standard attributes such as First Name,Last Name, Gender and Email Address (Raw).You can also send Custom Identifiers andAttributes.
+Criteo
+
+✅ Audiences
+
+This is the user ID for a logged-in user on the retailer's website.
+✅ Audiences
+✅ Source
+Learn more
+✅ Source
+✅Audiences
+
+Email address in SHA256
+MAIDs
+Emarsys
+
+For action "Send Identifiersto Emarsys" - Email address (raw)
+For action "Send Attributes and Identifiersto Emarsys" -Click here
+Identifiers/Attributes Supported:
+Email addresses (raw)
+First Name
+Last Name
+Gender
+Date of birth
+Phone
+Mobile
+City
+Company
+Company address
+City (office)
+Opt-in – Acceptable values are Yes/No or True/False.For other values, contact your Zeotap POC
+Custom Fields (Identifiers/Attributes)
+
+✅ Audiences
+✅ Journeys
+
+
+Identifiers/Attributes Supported:
+Facebook
+MAIDs
+
+✅ Audiences
+
+Facebook 1P
+MAIDs
+Hashed email address
+Hashed phone numbers
+Facebook External IDs
+
+✅ Audiences
+
+Facebook ConversionsAPI
+
+✅ Journeys
+Google Analytics 4
+GA Client ID
+
+✅ Audiences
+
+✅ Source
+
+✅ Audiences
+For action "Send Identifiersto Google Cloud Storage" -
+For action "Send Attributes and Identifiersto Google Cloud Storage"- Any identifiersand attributes
+
+✅ Audiences
+
+Google Customer Match -Customer Contact Information
+
+✅ Audiences
+
+Google Customer Match -Mobile Device ID’s
+MAIDs
+
+✅ Audiences
+
+Google Marketing Platform (DDP)
+MAIDs
+Google Cookies
+Zeotap Cookie for Google
+
+✅ Audiences
+
+Google DMP
+MAIDs
+Google Cookies
+
+✅ Audiences
+
+Google Pub/Sub
+Send any data in thisformat
+Custom Attributes
+
+✅ Journeys
+Google Universal Analytics
+GA Client ID
+
+✅ Journeys
+
+
+✅ Source
+✅ Audiences
+
+MAIDs
+Hashed email addresses(mostly Gmail)
+✅ Journeys
+
+✅ Audiences
+✅ Journeys
+
+LinkedIn
+Hashed Email Address (SHA256)
+MAIDs (GOOGLE AID)
+
+✅ Audiences
+
+Microsoft Ads Customer Match
+Hashed email addresses
+
+✅ Audiences
+
+Any Identifiers and Attributes
+✅ Sources
+✅ Audiences
+MAIDS
+Neodata Cookies
+
+✅ Audiences
+
+Oath(Yahoo)
+MAIDs
+Yahoo Cookies
+
+✅ Audiences
+
+
+
+
+✅ Audiences
+✅ Journeys
+✅ Journeys
+Email addresses
+Phone numbers
+Country
+First Name
+Last Name
+Address
+Gender
+IP
+Custom Attributes
+✅ Audiences
+Permutive
+MAIDs
+Appnexus Cookies
+Hashed email addresses
+
+✅ Audiences
+
+✅ Audiences
+Pinterest
+MAIDS
+Hashed mail addresses (SHA256)
+
+✅ Audiences
+
+Quantcast
+Quantcast Cookies
+
+✅ Audiences
+
+
+✅ Audiences
+
+✅ Audiences
+
+✅ Audiences
+
+
+RTB House Cookies (String)
+Event Timestamp
+Category ID (String)
+Product Offer event Product ID (String)
+Search Results event Product IDs (List/Array)
+Add to Cart Product ID (String)
+Shopping Cart Status Product IDs (List/Array)
+Order ID (String)
+Conversion Order Product IDs (List/Array)
+Value (Integer)
+✅ Source
+
+Salesforce Marketing Cloud -Data Extension
+Any Identifiers
+
+✅ Audiences
+
+✅ Journeys
+✅ Audiences
+✅ Journeys
+✅ Audiences
+
+✅ Audiences
+
+✅ Audiences
+
+✅ Source
+
+✅ Audiences
+
+MAIDs
+Taboola Cookies
+✅ Audiences
+
+✅ Audiences
+
+✅ Audiences
+TTD 1P
+MAIDS
+TTD Cookies
+
+✅ Audiences
+
+
+✅ Audiences
+
+Twitter
+MAIDs
+Hashed Email addresses (SHA256)
+
+✅ Audiences
+
+MAIDs
+Raw PII identifiers (defined asper organisation catalogue)
+✅ Audiences
+Zeotap Webhook
+API Based
+
+✅ Journeys
+
+This document is designed to provide you the crucial initial steps to get started with Zeotap CDP and gives you a comprehensive overview of Zeotap's capabilities. It also helps you to seamlessly integrate and utilise your data with Zeotap CDP. Whether you are new to data-driven platforms or an experienced user, this document will walk you through the prerequisites steps that are essential before setting up your Zeotap CDP account, the overall workflow of Zeotap CDP and the best practices to be followed while using Zeotap CDP.
+This section covers the following topics:
+
+
+Browse by product
+Do more with Zeotap
+
+Sign In
+
+Sign In
+
+Sign In
+
+Sign In
+
+Sign In
+What's New in Q1 of 2025?
+Learn about the new features/enhancements released in Q1 of 2025.
+
+1. Destination Enhancements
+The below enhancements are now available in the Zeotap CDP App.
+1.1 Newly Added Destination–Snowflake (Batch+Real Time)
+Snowflake is a cloud-based data warehousing platform designed for scalable data storage, processing, and analytics. It is known for its flexibility, performance, and ease of use in handling large volumes of structured and semi-structured data.
+Integrated with Zeotap CDP, it allows you to send batched and real-time data based on the audiences (segments) and workflows created in Zeotap CDP. In this setup, you establish a connection between your Google Cloud Storage (GCS) bucket and your Snowflake account. Zeotap CDP pushes data to your GCS bucket, where you can set up automation to receive data either in batches at fixed intervals or in real-time by configuring a Pub/Sub notification for the bucket. To know more about how to create a Destination for Snowflake and use it to send data, referhere.
+1.2 Support for Amazon Consent Signal
+Effective February 7, 2025, Amazon requires including a consent string or Amazon Consent Signal (amazonAdStorage,amazonUserData) for users in the European Economic Area (EEA) and the United Kingdom (UK). Refer to theAmazon consent signal requirementsfor details. Audience uploads without consent information are rejected.
+To ensure compliance, Zeotap CDP transmits theGRANTEDAmazon Consent Signal for users who qualify in an audience. Use one of the following methods to include only consented users in an audience:
+
+2. Enhancement in Protect
+2.1 Added Support for Deleting Customer Data Using Customer Data Lifecycle
+Data Lifecycle is a systematic cleanup process that ensures your data in the system stays relevant and actionable. You can use this capability to create/define rules for deletingCustomer dataandNon-Customer Entity (NCE)records from a source when it becomes obsolete due to various reasons.
+For example, consider a scenario where a company routinely gathers data from third-party vendors concerning product feedback. Over time, certain feedback may become outdated or irrelevant, particularly if it relates to discontinued products or resolved issues. By utilising the Data Lifecycle, administrators can establish rules to automatically delete obsolete records from the system, thereby ensuring the retention of only current and actionable information.
+Now, we have enhanced theData Lifecyclemodule with the addition of theCustomer Data Lifecycletab. This feature enables a cleanup process that ensuresdemographic, behavioural, product-related, derived, and modelled dataremains relevant and actionable. To know more about how to use this feature to define rules for deleting outdated customer data from a source, referhere.
+Related Topics
+Explore the exciting product releases fromQ4 2024.
+
+What's New in Q1 of 2025?
+Learn about the new features/enhancements released in Q1 of 2025.
+
+1. Destination Enhancements
+The below enhancements are now available in the Zeotap CDP App.
+1.1 Newly Added Destination–Snowflake (Batch+Real Time)
+Snowflake is a cloud-based data warehousing platform designed for scalable data storage, processing, and analytics. It is known for its flexibility, performance, and ease of use in handling large volumes of structured and semi-structured data.
+Integrated with Zeotap CDP, it allows you to send batched and real-time data based on the audiences (segments) and workflows created in Zeotap CDP. In this setup, you establish a connection between your Google Cloud Storage (GCS) bucket and your Snowflake account. Zeotap CDP pushes data to your GCS bucket, where you can set up automation to receive data either in batches at fixed intervals or in real-time by configuring a Pub/Sub notification for the bucket. To know more about how to create a Destination for Snowflake and use it to send data, referhere.
+1.2 Support for Amazon Consent Signal
+Effective February 7, 2025, Amazon requires including a consent string or Amazon Consent Signal (amazonAdStorage,amazonUserData) for users in the European Economic Area (EEA) and the United Kingdom (UK). Refer to theAmazon consent signal requirementsfor details. Audience uploads without consent information are rejected.
+To ensure compliance, Zeotap CDP transmits theGRANTEDAmazon Consent Signal for users who qualify in an audience. Use one of the following methods to include only consented users in an audience:
+
+2. Enhancement in Protect
+2.1 Added Support for Deleting Customer Data Using Customer Data Lifecycle
+Data Lifecycle is a systematic cleanup process that ensures your data in the system stays relevant and actionable. You can use this capability to create/define rules for deletingCustomer dataandNon-Customer Entity (NCE)records from a source when it becomes obsolete due to various reasons.
+For example, consider a scenario where a company routinely gathers data from third-party vendors concerning product feedback. Over time, certain feedback may become outdated or irrelevant, particularly if it relates to discontinued products or resolved issues. By utilising the Data Lifecycle, administrators can establish rules to automatically delete obsolete records from the system, thereby ensuring the retention of only current and actionable information.
+Now, we have enhanced theData Lifecyclemodule with the addition of theCustomer Data Lifecycletab. This feature enables a cleanup process that ensuresdemographic, behavioural, product-related, derived, and modelled dataremains relevant and actionable. To know more about how to use this feature to define rules for deleting outdated customer data from a source, referhere.
+Related Topics
+Explore the exciting product releases fromQ4 2024.
+
+
+
+Learn about thenew features released in the different quartersof the following years:
+Learn about thenew features released in every quarterof 2024.
+Learn about thenew features released in every quarterof 2023.
+Learn about thenew features released in every quarterof 2022.
+
+Sign In
+
+PLATFORM NAME
+IDENTIFIERS/ATTRIBUTES SUPPORTED
+Adform
+MAIDs
+✅ Audiences
+
+Adform DMP
+
+
+✅ Audiences
+
+✅ Journeys
+✅ Audiences
+✅ Journeys
+
+Adobe Target
+
+Mbox 3rd party IDs
+
+✅ Audiences
+✅ Journeys
+Mbox 3rd party IDs
+ECID
+Adobe Target Session ID
+Mbox Edge Number
+Airship
+✅ Source
+✅ Audiences
+✅ Journeys
+Named Users
+
+Amazon DSP(New)
+Zeotap Cookie for Amazon
+MAIDs
+
+✅ Audiences
+
+Any Identifiers and Attributes
+✅Source
+✅ Audiences
+
+External User ID
+Hashed Email Addresses (SHA256)
+Hashed Cellphone Numbers (SHA256)
+First Name
+Last Name
+Address
+City
+State
+Postal
+Country Code
+✅ Audiences
+AppNexus(Xandr)
+AppNexus (Xandr) Cookies
+MAIDs
+
+✅ Audiences
+
+✅ Journeys
+Artegic Elaine
+Email Addresses (raw), First Name,Last Name, Gender andCustom Fields (any attribute/identifier)
+
+✅ Audiences
+
+✅ Source
+✅ Audiences
+✅ Journeys
+For action "Send Advertising IDs toBatch" - MAIDs
+For action "Send Custom IDs toBatch" - Custom IDs
+For action "Send Installation IDs toBatch" - Install IDsFor action "Send Attributes to Batch" -Any attributes of your choice like First Name,Last Name, Email, and more
+Braze
+
+Message Engagement Events.Learn more
+Consumer Behaviour anduser events.Learn more
+✅ Source
+✅ Audiences
+✅ Journeys
+For action "Send Identifiers toBraze" - Email addresses (raw)
+For action "Send Attributes andIdentifiers to Braze" -
+✅ Source
+✅ Audiences
+✅ Journeys
+
+
+
+​Identifiers/Attributes Supported:
+Learn More
+This integration supports Subscription IDand standard attributes such as First Name,Last Name, Gender and Email Address (Raw).You can also send Custom Identifiers andAttributes.
+Criteo
+
+✅ Audiences
+
+This is the user ID for a logged-in user on the retailer's website.
+✅ Audiences
+✅ Source
+Learn more
+✅ Source
+✅Audiences
+
+Email address in SHA256
+MAIDs
+Emarsys
+
+For action "Send Identifiersto Emarsys" - Email address (raw)
+For action "Send Attributes and Identifiersto Emarsys" -Click here
+Identifiers/Attributes Supported:
+Email addresses (raw)
+First Name
+Last Name
+Gender
+Date of birth
+Phone
+Mobile
+City
+Company
+Company address
+City (office)
+Opt-in – Acceptable values are Yes/No or True/False.For other values, contact your Zeotap POC
+Custom Fields (Identifiers/Attributes)
+
+✅ Audiences
+✅ Journeys
+
+
+Identifiers/Attributes Supported:
+Facebook
+MAIDs
+
+✅ Audiences
+
+Facebook 1P
+MAIDs
+Hashed email address
+Hashed phone numbers
+Facebook External IDs
+
+✅ Audiences
+
+Facebook ConversionsAPI
+
+✅ Journeys
+Google Analytics 4
+GA Client ID
+
+✅ Audiences
+
+✅ Source
+
+✅ Audiences
+For action "Send Identifiersto Google Cloud Storage" -
+For action "Send Attributes and Identifiersto Google Cloud Storage"- Any identifiersand attributes
+
+✅ Audiences
+
+Google Customer Match -Customer Contact Information
+
+✅ Audiences
+
+Google Customer Match -Mobile Device ID’s
+MAIDs
+
+✅ Audiences
+
+Google Marketing Platform (DDP)
+MAIDs
+Google Cookies
+Zeotap Cookie for Google
+
+✅ Audiences
+
+Google DMP
+MAIDs
+Google Cookies
+
+✅ Audiences
+
+Google Pub/Sub
+Send any data in thisformat
+Custom Attributes
+
+✅ Journeys
+Google Universal Analytics
+GA Client ID
+
+✅ Journeys
+
+
+✅ Source
+✅ Audiences
+
+MAIDs
+Hashed email addresses(mostly Gmail)
+✅ Journeys
+
+✅ Audiences
+✅ Journeys
+
+LinkedIn
+Hashed Email Address (SHA256)
+MAIDs (GOOGLE AID)
+
+✅ Audiences
+
+Microsoft Ads Customer Match
+Hashed email addresses
+
+✅ Audiences
+
+Any Identifiers and Attributes
+✅ Sources
+✅ Audiences
+MAIDS
+Neodata Cookies
+
+✅ Audiences
+
+Oath(Yahoo)
+MAIDs
+Yahoo Cookies
+
+✅ Audiences
+
+
+
+
+✅ Audiences
+✅ Journeys
+✅ Journeys
+Email addresses
+Phone numbers
+Country
+First Name
+Last Name
+Address
+Gender
+IP
+Custom Attributes
+✅ Audiences
+Permutive
+MAIDs
+Appnexus Cookies
+Hashed email addresses
+
+✅ Audiences
+
+✅ Audiences
+Pinterest
+MAIDS
+Hashed mail addresses (SHA256)
+
+✅ Audiences
+
+Quantcast
+Quantcast Cookies
+
+✅ Audiences
+
+
+✅ Audiences
+
+✅ Audiences
+
+✅ Audiences
+
+
+RTB House Cookies (String)
+Event Timestamp
+Category ID (String)
+Product Offer event Product ID (String)
+Search Results event Product IDs (List/Array)
+Add to Cart Product ID (String)
+Shopping Cart Status Product IDs (List/Array)
+Order ID (String)
+Conversion Order Product IDs (List/Array)
+Value (Integer)
+✅ Source
+
+Salesforce Marketing Cloud -Data Extension
+Any Identifiers
+
+✅ Audiences
+
+✅ Journeys
+✅ Audiences
+✅ Journeys
+✅ Audiences
+
+✅ Audiences
+
+✅ Audiences
+
+✅ Source
+
+✅ Audiences
+
+MAIDs
+Taboola Cookies
+✅ Audiences
+
+✅ Audiences
+
+✅ Audiences
+TTD 1P
+MAIDS
+TTD Cookies
+
+✅ Audiences
+
+
+✅ Audiences
+
+Twitter
+MAIDs
+Hashed Email addresses (SHA256)
+
+✅ Audiences
+
+MAIDs
+Raw PII identifiers (defined asper organisation catalogue)
+✅ Audiences
+Zeotap Webhook
+API Based
+
+✅ Journeys
+
+
+PLATFORM NAME
+IDENTIFIERS/ATTRIBUTES SUPPORTED
+Adform
+MAIDs
+✅ Audiences
+
+Adform DMP
+
+
+✅ Audiences
+
+✅ Journeys
+✅ Audiences
+✅ Journeys
+
+Adobe Target
+
+Mbox 3rd party IDs
+
+✅ Audiences
+✅ Journeys
+Mbox 3rd party IDs
+ECID
+Adobe Target Session ID
+Mbox Edge Number
+Airship
+✅ Source
+✅ Audiences
+✅ Journeys
+Named Users
+
+Amazon DSP(New)
+Zeotap Cookie for Amazon
+MAIDs
+
+✅ Audiences
+
+Any Identifiers and Attributes
+✅Source
+✅ Audiences
+
+External User ID
+Hashed Email Addresses (SHA256)
+Hashed Cellphone Numbers (SHA256)
+First Name
+Last Name
+Address
+City
+State
+Postal
+Country Code
+✅ Audiences
+AppNexus(Xandr)
+AppNexus (Xandr) Cookies
+MAIDs
+
+✅ Audiences
+
+✅ Journeys
+Artegic Elaine
+Email Addresses (raw), First Name,Last Name, Gender andCustom Fields (any attribute/identifier)
+
+✅ Audiences
+
+✅ Source
+✅ Audiences
+✅ Journeys
+For action "Send Advertising IDs toBatch" - MAIDs
+For action "Send Custom IDs toBatch" - Custom IDs
+For action "Send Installation IDs toBatch" - Install IDsFor action "Send Attributes to Batch" -Any attributes of your choice like First Name,Last Name, Email, and more
+Braze
+
+Message Engagement Events.Learn more
+Consumer Behaviour anduser events.Learn more
+✅ Source
+✅ Audiences
+✅ Journeys
+For action "Send Identifiers toBraze" - Email addresses (raw)
+For action "Send Attributes andIdentifiers to Braze" -
+✅ Source
+✅ Audiences
+✅ Journeys
+
+
+
+​Identifiers/Attributes Supported:
+Learn More
+This integration supports Subscription IDand standard attributes such as First Name,Last Name, Gender and Email Address (Raw).You can also send Custom Identifiers andAttributes.
+Criteo
+
+✅ Audiences
+
+This is the user ID for a logged-in user on the retailer's website.
+✅ Audiences
+✅ Source
+Learn more
+✅ Source
+✅Audiences
+
+Email address in SHA256
+MAIDs
+Emarsys
+
+For action "Send Identifiersto Emarsys" - Email address (raw)
+For action "Send Attributes and Identifiersto Emarsys" -Click here
+Identifiers/Attributes Supported:
+Email addresses (raw)
+First Name
+Last Name
+Gender
+Date of birth
+Phone
+Mobile
+City
+Company
+Company address
+City (office)
+Opt-in – Acceptable values are Yes/No or True/False.For other values, contact your Zeotap POC
+Custom Fields (Identifiers/Attributes)
+
+✅ Audiences
+✅ Journeys
+
+
+Identifiers/Attributes Supported:
+Facebook
+MAIDs
+
+✅ Audiences
+
+Facebook 1P
+MAIDs
+Hashed email address
+Hashed phone numbers
+Facebook External IDs
+
+✅ Audiences
+
+Facebook ConversionsAPI
+
+✅ Journeys
+Google Analytics 4
+GA Client ID
+
+✅ Audiences
+
+✅ Source
+
+✅ Audiences
+For action "Send Identifiersto Google Cloud Storage" -
+For action "Send Attributes and Identifiersto Google Cloud Storage"- Any identifiersand attributes
+
+✅ Audiences
+
+Google Customer Match -Customer Contact Information
+
+✅ Audiences
+
+Google Customer Match -Mobile Device ID’s
+MAIDs
+
+✅ Audiences
+
+Google Marketing Platform (DDP)
+MAIDs
+Google Cookies
+Zeotap Cookie for Google
+
+✅ Audiences
+
+Google DMP
+MAIDs
+Google Cookies
+
+✅ Audiences
+
+Google Pub/Sub
+Send any data in thisformat
+Custom Attributes
+
+✅ Journeys
+Google Universal Analytics
+GA Client ID
+
+✅ Journeys
+
+
+✅ Source
+✅ Audiences
+
+MAIDs
+Hashed email addresses(mostly Gmail)
+✅ Journeys
+
+✅ Audiences
+✅ Journeys
+
+LinkedIn
+Hashed Email Address (SHA256)
+MAIDs (GOOGLE AID)
+
+✅ Audiences
+
+Microsoft Ads Customer Match
+Hashed email addresses
+
+✅ Audiences
+
+Any Identifiers and Attributes
+✅ Sources
+✅ Audiences
+MAIDS
+Neodata Cookies
+
+✅ Audiences
+
+Oath(Yahoo)
+MAIDs
+Yahoo Cookies
+
+✅ Audiences
+
+
+
+
+✅ Audiences
+✅ Journeys
+✅ Journeys
+Email addresses
+Phone numbers
+Country
+First Name
+Last Name
+Address
+Gender
+IP
+Custom Attributes
+✅ Audiences
+Permutive
+MAIDs
+Appnexus Cookies
+Hashed email addresses
+
+✅ Audiences
+
+✅ Audiences
+Pinterest
+MAIDS
+Hashed mail addresses (SHA256)
+
+✅ Audiences
+
+Quantcast
+Quantcast Cookies
+
+✅ Audiences
+
+
+✅ Audiences
+
+✅ Audiences
+
+✅ Audiences
+
+
+RTB House Cookies (String)
+Event Timestamp
+Category ID (String)
+Product Offer event Product ID (String)
+Search Results event Product IDs (List/Array)
+Add to Cart Product ID (String)
+Shopping Cart Status Product IDs (List/Array)
+Order ID (String)
+Conversion Order Product IDs (List/Array)
+Value (Integer)
+✅ Source
+
+Salesforce Marketing Cloud -Data Extension
+Any Identifiers
+
+✅ Audiences
+
+✅ Journeys
+✅ Audiences
+✅ Journeys
+✅ Audiences
+
+✅ Audiences
+
+✅ Audiences
+
+✅ Source
+
+✅ Audiences
+
+MAIDs
+Taboola Cookies
+✅ Audiences
+
+✅ Audiences
+
+✅ Audiences
+TTD 1P
+MAIDS
+TTD Cookies
+
+✅ Audiences
+
+
+✅ Audiences
+
+Twitter
+MAIDs
+Hashed Email addresses (SHA256)
+
+✅ Audiences
+
+MAIDs
+Raw PII identifiers (defined asper organisation catalogue)
+✅ Audiences
+Zeotap Webhook
+API Based
+
+✅ Journeys
+
+
+Customer behaviour and user events
+Message engagement events
+Attribution
+Abort
+Custom Events
+Bounce
+Locations
+Campaign
+Purchases
+Canvas
+Random Bucket Number
+Clicks
+Sessions
+Content Cards
+
+Conversion
+
+Delivery
+
+Dismissal
+
+Email
+
+Entry
+
+Exit
+
+Experiment Step
+
+Failure
+
+Impressions
+
+In-App Messages
+
+InboundReceived
+
+iOS
+
+Opens
+
+Push
+
+Read
+
+Rejection
+
+Sends
+
+SMS
+
+Spam
+
+Subscription
+
+Uninstall
+
+Webhooks
+
+WhatsApp
+
+Campaign
+Campaign Opens
+Campaign Clicks
+Campaign Page Views
+Contacts
+Preferences
+id
+contactId
+contactId
+contactId
+id
+id
+name
+email
+email
+email
+email
+publicName
+subject
+mailClient
+url
+url
+optInType
+privateName
+fromName
+mailClientVersion
+ipAddress
+dateViewed
+emailType
+isPreference
+fromAddress (Object)
+id
+email
+ipAddress
+userAgent
+
+dataFields
+order
+htmlContent
+userAgent
+dateClicked
+
+status
+isPublic
+plainTextContent
+isHtml
+keyword
+
+
+categoryId
+replyAction
+isForward
+
+
+
+preferenceCount
+replyToAddress
+dateOpened
+
+
+
+created
+isSplitTest
+
+
+
+
+lastModified
+status
+
+
+
+
+preferences (Object)
+id
+publicName
+privateName
+isPreference
+orderisPublic
+categoryId
+preferenc
+Count
+created
+lastModified
+isOptedIn
+Contacts
+Company
+email
+hs_lead_status
+firstname
+total_revenue
+lastname
+country
+phone
+name
+message
+lifecyclestage
+hs_email_bounce
+createdate
+hs_email_open
+domain
+hs_email_click
+hs_lastmodifieddate
+hs_email_last_email_name
+hs_object_id
+hs_email_last_click_date
+
+hs_email_last_open_date
+
+hs_email_last_send_date
+
+hs_email_sends_since_last_engagement
+
+hs_email_optout_59432915
+
+hs_email_optout
+
+subscription_statuses
+
+hs_language
+
+hs_lifecyclestage_lead_date
+
+hs_lifecyclestage_opportunity_date
+
+hs_lifecyclestage_salesqualifiedlead_date
+
+country
+
+hs_lead_status
+
+hs_lifecyclestage_customer_date
+
+hs_lifecyclestage_lead_date
+
+hs_lifecyclestage_marketingqualifiedlead_date
+
+hs_lifecyclestage_salesqualifiedlead_date
+
+hs_lifecyclestage_subscriber_date
+
+hs_lifecyclestage_evangelist_date
+
+hs_lifecyclestage_opportunity_date
+
+hs_lifecyclestage_other_date
+
+hs_email_optout_10510512
+
+hs_email_optout_10510759
+
+hs_email_optout_15662779
+
+hs_email_optout_41447686
+
+hs_email_optout_5405059
+
+hs_email_optout_5405060
+
+hs_email_optout_5405106
+
+
+
+Account
+Lead
+Contact
+Case
+Opportunity
+AccountNumber
+AccountNumber
+AccountId
+AccountId
+AccountId
+AccountSource
+AccountSource
+AssistantName
+AssetWarrantyID
+AgeInDays
+AnnualRevenue
+AnnualRevenue
+AssistantPhone
+BusinessHoursId
+Amount
+ChannelProgramLevelName
+ChannelProgramLevelName
+Birthdate
+Comments
+CampaignId
+ChannelProgramName
+ChannelProgramName
+CanAllowPortalSelfReg
+CaseNumber
+CloseDate
+CleanStatus
+CleanStatus
+CleanStatus
+ClosedDate
+ConnectionReceivedId
+ConnectionReceivedId
+ConnectionReceivedId
+ConnectionReceivedId
+CommunityId
+ConnectionSentId
+ConnectionSentId
+ConnectionSentId
+ConnectionSentId
+ConnectionReceivedId
+ContactId
+Description
+Description
+Department
+ConnectionSentId
+ContractId
+DunsNumber
+DunsNumber
+Description
+ContactEmail
+CurrencyIsoCode
+Fax
+Fax
+DoNotCall
+ContactFax
+Description
+Industry
+Industry
+Email
+ContactId
+ExpectedRevenue
+IsCustomerPortal
+IsCustomerPortal
+EmailBouncedDate
+ContactMobile
+Fiscal
+IsPartner
+IsPartner
+EmailBouncedReason
+ContactPhone
+FiscalQuarter
+IsPersonAccount
+IsPersonAccount
+Fax
+CreatorFullPhotoUrl
+FiscalYear
+Jigsaw
+Jigsaw
+FirstCallDateTime
+CreatorName
+ForecastCategory
+LastActivityDate
+LastActivityDate
+FirstEmailDateTime
+CreatorSmallPhotoUrl
+ForecastCategoryName
+LastReferencedDate
+LastReferencedDate
+FirstName
+Description
+HasOpenActivity
+LastViewedDate
+LastViewedDate
+GenderIdentity
+FeedItemId
+HasOpportunityLineItem
+MasterRecordId
+MasterRecordId
+HasOptedOutOfEmail
+HasCommentsUnreadByOwner
+HasOverdueTask
+NaicsCode
+NaicsCode
+HasOptedOutOfFax
+HasSelfServiceComments
+IqScore
+NaicsDesc
+NaicsDesc
+HomePhone
+IsClosed
+IsClosed
+Name
+Name
+IndividualId
+IsClosedOnCreate
+IsDeleted
+NumberOfEmployees
+NumberOfEmployees
+IsDeleted
+IsDeleted
+IsExcludedFromTerritory2Filter
+OperatingHoursId
+OperatingHoursId
+IsEmailBounced
+IsEscalated
+IsPriorityRecord
+OwnerId
+OwnerId
+IsPersonAccount
+IsSelfServiceClosed
+IsSplit
+Ownership
+Ownership
+Jigsaw
+IsStopped
+IsWon
+ParentId
+ParentId
+LastActivityDate
+IsVisibleInSelfService
+LastActivityDate
+PersonIndividualId
+PersonIndividualId
+LastName
+Language
+LastActivityInDays
+Phone
+Phone
+LastReferencedDate
+LastReferencedDate
+LastAmountChangedHistoryId
+PhotoUrl
+PhotoUrl
+LastViewedDate
+LastViewedDate
+LastCloseDateChangedHistoryId
+Rating
+Rating
+LeadSource
+MasterRecordId
+LastReferencedDate
+RecordTypeId
+RecordTypeId
+MasterRecordId
+Origin
+LastStageChangeDate
+Salutation
+Salutation
+MiddleName
+OwnerId
+LastStageChangeInDays
+Sic
+Sic
+MobilePhone
+ParentId
+LastViewedDate
+SicDesc
+SicDesc
+Name
+Priority
+LeadSource
+Site
+Site
+OwnerId
+QuestionId
+Name
+TickerSymbol
+TickerSymbol
+Phone
+Reason
+NextStep
+Tradestyle
+Tradestyle
+PhotoUrl
+RecordTypeId
+OwnerId
+Type
+Type
+Pronouns
+ServiceContractId
+PartnerAccountId
+Website
+Website
+RecordTypeId
+SlaStartDate
+Pricebook2Id
+YearStarted
+YearStarted
+ReportsToId
+SourceId
+PricebookId
+
+
+Salutation
+Status
+Probability
+
+
+Suffix
+StopStartDate
+PushCount
+
+
+Title
+Subject
+RecordTypeId
+
+
+
+SuppliedCompany
+StageName
+
+
+
+SuppliedEmail
+SyncedQuoteID
+
+
+
+SuppliedName
+Territory2Id
+
+
+
+SuppliedPhone
+TotalOpportunityQuantity
+
+
+
+Type
+Type
