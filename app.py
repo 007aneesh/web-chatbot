@@ -9,11 +9,12 @@ load_dotenv()
 
 api_key = os.getenv("GEMINI_API_KEY")
 if api_key:
-    genai.configure(api_key=api_key)
+    # getting invalid api key for now directly using it
+    genai.configure(api_key="AIzaSyC1b24YZAIU9-XUVGNb4Up3F5QHik3bvKw")
 else:
     print("API key not found. Please set GEMINI_API_KEY in the .env file.")
 
-BASE_URL = "https://github.com/007aneesh/web-chatbot/blob/main/"
+BASE_URL = "https://raw.githubusercontent.com/007aneesh/web-chatbot/main/"
 DATASETS = {
     "Segment": "segment_data.txt",
     "mParticle": "mparticle_data.txt",
@@ -46,7 +47,7 @@ def ask_chatbot(question, documentation):
     """
 
     try:
-        model = genai.GenerativeModel(model_name='gemini-1.5-flash')
+        model = genai.GenerativeModel(model_name='gemini-2.0-flash')
         response = model.generate_content(prompt)
         return response.text if hasattr(response, 'text') else "Error: Invalid response format."
     except Exception as e:
