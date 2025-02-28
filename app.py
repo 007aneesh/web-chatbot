@@ -58,7 +58,6 @@ st.title("Documentation Chatbot")
 selected_dataset = st.selectbox("Choose the documentation source:", list(DATASETS.keys()))
 
 if selected_dataset:
-    # Load the corresponding data
     data_file = DATASETS[selected_dataset]
     documentation = load_data(data_file)
     if documentation:
