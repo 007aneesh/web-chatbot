@@ -2,6 +2,8 @@
 
 This is a **Documentation Chatbot** built with **Streamlit** and **Google Generative AI**. It helps users query specific documentation datasets and provides responses strictly based on the selected documentation source.
 
+## Live on: https://aneesh-chatbot.streamlit.app/
+
 ## Features
 - Select from multiple documentation sources (Segment, mParticle, Lytics, Zeotap)
 - Asks questions and receives context-specific answers based on the chosen dataset
